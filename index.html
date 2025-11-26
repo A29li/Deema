@@ -1,93 +1,138 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deema Hussein | Portfolio & Achievements</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Deema Hussein - Designer & Seamstress</title>
+    <link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Deema Hussein</h1>
-            <p>Student in Oil & Gas Refining Technology | Designer & Seamstress</p>
+
+    <div id="welcomeModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Welcome to Deema's Digital Hub!</h2>
+            <p>This is my personal site where I share my latest projects in design and tailoring, my academic updates, and the tools I use. Thank you for visiting!</p>
+            <button id="modal-close-btn">Enter Site</button>
         </div>
+    </div>
+
+    <header>
+        <nav>
+            <div class="logo">Deema Hussein</div>
+            <ul class="nav-links">
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#achievements">Projects</a></li> <li><a href="#tools">My Tools</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <div class="container">
-        <section id="intro" class="card">
-            <h3 id="welcome-text">Welcome to My Profile!</h3>
-            <p>I am Dima Hussein, a passionate student in the Oil and Gas Refining Technology department. Alongside my academic studies, I manage my own business and have accumulated various achievements and freelance projects that I am eager to share with you.</p>
-            <p>This website serves as a platform to display my latest updates, practical tools, and achievements tailored for a specific and targeted community interest.</p>
+    <main>
+        <section id="profile" class="hero">
+            <img src="images/profile_deema.png" alt="Deema Hussein Profile Picture" class="profile-pic"> 
+            <h1>Hi, I'm Dima Hussein</h1>
+            <p class="subtitle">Designer & Seamstress | Oil & Gas Technology Student</p>
+            <p class="bio">
+                Welcome! I'm Deema Hussein, based in Samawah, Iraq. I am currently a student in the Oil and Gas Refining Technology department. My passion lies in **Design and Tailoring**, and I successfully manage my own business alongside my studies.
+                <br><br>
+                This website is my personal hub where I share my creative work, achievements, and updates. My goal is to continually share practical and valuable content, particularly in my freelance and business projects.
+            </p>
         </section>
 
-        <section id="profile">
-            <h2><i class="fas fa-user-circle"></i> About Me</h2>
-            <div class="info-grid">
-                <div><strong>Name:</strong> Deema Hussein</div>
-                <div><strong>Field:</strong> Oil & Gas Refining Technology Student</div>
-                <div><strong>Address:</strong> Samawah, Al Muthanna, Iraq</div>
-                <div><strong>Date of Birth:</strong> November 5, 2025</div>
-                <div><strong>Skills:</strong> Designer, Seamstress, Microsoft Office Suite</div>
-                <div><strong>Email:</strong> <a href="mailto:deemahussein18@gmail.com">deemahussein18@gmail.com</a></div>
+        <section id="achievements">
+            <h2>✨ My Latest Projects & Achievements</h2>
+            <p class="section-subtitle">
+                A selection of my recent design and tailoring projects, highlighting practical and realistic outcomes.
+            </p>
+            <div class="gallery-grid updates-grid"> <article class="update-card gallery-item">
+                    <img src="images/project1.jpg" alt="Tailoring Project 1"> 
+                    <h3>Project Title 1: (Write your title here)</h3>
+                    <p class="update-date">Completed: November 2025</p>
+                    <p>Brief description of this tailoring or design project.</p>
+                    <a href="#" class="btn-read-more">View Details</a>
+                </article>
+
+                <article class="update-card gallery-item">
+                    <img src="images/project2.jpg" alt="Design Project 2">
+                    <h3>Project Title 2: (Write your title here)</h3>
+                    <p class="update-date">Completed: [Date]</p>
+                    <p>Brief description of this tailoring or design project.</p>
+                    <a href="#" class="btn-read-more">View Details</a>
+                </article>
+
+                <article class="update-card gallery-item">
+                    <img src="images/project3.jpg" alt="Freelance Work 3">
+                    <h3>Project Title 3: (Write your title here)</h3>
+                    <p class="update-date">Completed: [Date]</p>
+                    <p>Brief description of this tailoring or design project.</p>
+                    <a href="#" class="btn-read-more">View Details</a>
+                </article>
+
+                <article class="update-card gallery-item">
+                    <img src="images/project4.jpg" alt="Oil & Gas Document">
+                    <h3>Project Title 4: (Write your title here)</h3>
+                    <p class="update-date">Completed: [Date]</p>
+                    <p>Brief description of this tailoring or design project.</p>
+                    <a href="#" class="btn-read-more">View Details</a>
+                </article>
+
+                <article class="update-card gallery-item">
+                    <img src="images/project5.jpg" alt="Business Achievement 5">
+                    <h3>Project Title 5: (Write your title here)</h3>
+                    <p class="update-date">Completed: [Date]</p>
+                    <p>Brief description of this tailoring or design project.</p>
+                    <a href="#" class="btn-read-more">View Details</a>
+                </article>
+
+                <article class="update-card gallery-item">
+                    <img src="images/project6.jpg" alt="Personal Project 6">
+                    <h3>Project Title 6: (Write your title here)</h3>
+                    <p class="update-date">Completed: [Date]</p>
+                    <p>Brief description of this tailoring or design project.</p>
+                    <a href="#" class="btn-read-more">View Details</a>
+                </article>
+
             </div>
         </section>
 
         <section id="tools">
-            <h2><i class="fas fa-tools"></i> My Tools & Content Base</h2>
-            <p>My tools are simple, straightforward, and designed to be practical and realistic for specific community interests.</p>
-            <div class="tools-list">
-                <span class="tool-item"><i class="far fa-file-word"></i> Microsoft Word</span>
-                <span class="tool-item"><i class="fas fa-laptop-code"></i> Full Microsoft Office Suite</span>
-            </div>
-            <p class="note">The entire Microsoft Office suite constitutes the base of my content creation and documentation.</p>
-        </section>
-
-        <section id="achievements">
-            <h2><i class="fas fa-trophy"></i> My Achievements & Projects</h2>
-            <div class="gallery-grid">
-
-                <div class="gallery-item">
-                    <img src="images/image1.jpg" alt="Project 1 Label">
-                    <p class="image-label">**Project 1 Label: (Write your label here)**</p>
-                </div>
-
-                <div class="gallery-item">
-                    <img src="images/image2.jpg" alt="Project 2 Label">
-                    <p class="image-label">**Project 2 Label: (Write your label here)**</p>
-                </div>
+            <h2>🛠️ My Tools & Skills</h2>
+            <p class="section-subtitle">
+                My core skills and tools are simple, straightforward, and focus on practical application in my business and studies.
+            </p>
+            <div class="tools-grid">
                 
-                <div class="gallery-item">
-                    <img src="images/image3.jpg" alt="Project 3 Label">
-                    <p class="image-label">**Project 3 Label: (Write your label here)**</p>
+                <div class="tool-card">
+                    <img src="images/sewing_icon.png" alt="Tailoring Icon">
+                    <h3>Designer & Seamstress</h3>
+                    <p>My core skill in creating and executing high-quality fashion and textile designs.</p>
                 </div>
 
-                <div class="gallery-item">
-                    <img src="images/image4.jpg" alt="Project 4 Label">
-                    <p class="image-label">**Project 4 Label: (Write your label here)**</p>
+                <div class="tool-card">
+                    <img src="images/word_icon.png" alt="Microsoft Word icon">
+                    <h3>Microsoft Word</h3>
+                    <p>My primary tool for drafting all my written content, business reports, and academic documentation.</p>
                 </div>
 
-                <div class="gallery-item">
-                    <img src="images/image5.jpg" alt="Project 5 Label">
-                    <p class="image-label">**Project 5 Label: (Write your label here)**</p>
+                <div class="tool-card">
+                    <img src="images/ms_office.png" alt="Microsoft Office icon">
+                    <h3>Microsoft Office Suite</h3>
+                    <p>Proficient in the full suite (Excel, PowerPoint, etc.) for financial tracking, analysis, and presentations.</p>
                 </div>
-
-                <div class="gallery-item">
-                    <img src="images/image6.jpg" alt="Project 6 Label">
-                    <p class="image-label">**Project 6 Label: (Write your label here)**</p>
-                </div>
-
             </div>
         </section>
-        
-    </div>
+
+        <section id="contact">
+            <h2>📞 Get In Touch</h2>
+            <p>I'm always open to discussing new business collaborations and creative ideas.</p>
+            <p><strong>Email:</strong> <a href="mailto:deemahussein18@gmail.com">deemahussein18@gmail.com</a></p>
+            <p><strong>Location:</strong> Samawah, Al Muthanna, Iraq</p>
+        </section>
+    </main>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2025 Deema Hussein. All Rights Reserved. | <a href="mailto:deemahussein18@gmail.com">Contact Me</a></p>
-        </div>
+        <p>&copy; 2025 Deema Hussein. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
