@@ -1,38 +1,20 @@
-document.addEventListener('DOMContentLoaded', (event) => {
-    const modal = document.getElementById('welcomeModal');
-    const closeButton = document.querySelector('.close-button');
-    const enterButton = document.getElementById('enterSiteButton');
-    
-    // Check if the user has visited before using Local Storage
-    const hasVisited = localStorage.getItem('siteVisited');
+// A simple effect for the welcome text
+document.addEventListener('DOMContentLoaded', function() {
+    const welcomeElement = document.getElementById('welcome-text');
+    const originalText = welcomeElement.textContent;
+    welcomeElement.textContent = ''; // Clear the text initially
+    let i = 0;
 
-    if (!hasVisited) {
-        // If they haven't visited, show the modal using 'flex' for centering
-        modal.style.display = 'flex'; 
+    function typeWriter() {
+        if (i < originalText.length) {
+            welcomeElement.textContent += originalText.charAt(i);
+            i++;
+            setTimeout(typeWriter, 50); // Typing speed in milliseconds
+        }
     }
 
-    // Function to close the modal and set the visit flag
-    function closeModal() {
-        modal.style.display = 'none';
-        // Set local storage item so the modal doesn't show up again
-        localStorage.setItem('siteVisited', 'true');
-    }
-
-    // Event Listeners for closing the modal
-    closeButton.addEventListener('click', closeModal);
-    enterButton.addEventListener('click', closeModal);
-
-    // Close when the user clicks anywhere outside of the modal content
-    window.addEventListener('click', (event) => {
-        if (event.target === modal) {
-            closeModal();
-        }
-    });
-
-    // Close modal if the user presses the Escape key
-    document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape' && modal.style.display === 'flex') {
-            closeModal();
-        }
-    });
+    // Run the typing effect 1 second after the page loads
+    setTimeout(typeWriter, 1000);
 });
+
+// You can add more interactive scripts here later
