@@ -119,7 +119,7 @@ nav {
     border-radius: 50px;
     font-weight: bold;
     transition: background-color 0.3s;
-    border: none; /* إضافة زرار الزر */
+    border: none;
     cursor: pointer;
 }
 .btn-primary:hover {
@@ -491,6 +491,23 @@ footer {
     padding: 10px 15px;
     border-radius: 4px;
     font-size: 1em;
+}
+
+/* Style for the Reel Button (NEW) */
+.btn-reel {
+    display: block;
+    text-align: center;
+    background-color: #383838; /* لون رمادي داكن لتمييزه عن زر الطلب */
+    color: white;
+    padding: 15px;
+    margin-top: 15px; 
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+.btn-reel:hover {
+    background-color: #555555;
 }
 
 .btn-large {
