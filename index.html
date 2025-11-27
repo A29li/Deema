@@ -1,180 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deema Boutique - Designer & Tailoring</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
-
-    <div id="welcomeModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h2>Welcome to Deema Boutique!</h2>
-            <p>I share my latest designs in tailoring, fashion, and academic updates. Thank you for visiting!</p>
-            <button id="modal-close-btn">Enter Site</button>
-        </div>
-    </div>
-
-    <header>
-        <nav>
-            <div class="logo">Deema Boutique</div>
-            <ul class="nav-links">
-                <li><a href="#profile">Profile</a></li>
-                <li><a href="#products">Products</a></li> 
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#payment">Payment</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section id="profile" class="hero">
-            <img src="images/profile_deema.png" alt="Deema Hussein Profile Picture" class="profile-pic"> 
-            
-            <div class="profile-header">
-                <p class="name-sub">Deema Hussein</p>
-                <p class="role-sub">Designer & Oil/Gas Student</p>
-            </div>
-
-            <h1>Hi, I'm Deema Hussein</h1>
-            <p class="bio">
-                I am a passionate student in Oil and Gas Refining Technology, based in Samawah, Iraq. My true passion lies in **Design and Tailoring**, where I manage my own successful freelance business. 
-                <br>
-                <br>
-                **Welcome to Deema Boutique!** Browse our latest designs and contact us to order.
-            </p>
-            <a href="#products" class="btn-primary">View Products</a>
-        </section>
-
-        <section id="products">
-            <h2>Featured Designs & Collections</h2>
-            <div class="products-grid">
-                
-                <article class="product-card featured-product">
-                    <img src="images/profile1.jpg" alt="Gray Formal Suit">
-                    <h3>Gray Formal Formal Suit</h3>
-                    <p class="product-info">طقم رسمي نسائي باللون الرمادي الفاتح. اضغط على الزر لمشاهدة جميع الصور والتفاصيل والسعر.</p>
-                    
-                    <button class="btn-primary btn-details" data-product-id="gray-suit">View Details & Price</button>
-                    
-                    <a href="#payment" class="btn-payment">Payment Methods</a>
-                </article>
-
-                <article class="product-card category-card">
-                    <img src="images/project2.jpg" alt="Evening Wear Category">
-                    <h3>Official & Evening Wear</h3>
-                    <p class="product-info">فساتين السهرة، ملابس المناسبات، والتفصيل حسب الطلب بجودة عالية.</p>
-                    <a href="https://www.instagram.com/deemaboutiquee" target="_blank" class="view-link"><i class="fab fa-instagram"></i> View Collection</a>
-                    <a href="#payment" class="btn-payment">Payment Methods</a>
-                </article>
-
-                <article class="product-card category-card">
-                    <img src="images/project3.jpg" alt="Casual Outfits Category">
-                    <h3>Casual & Daily Outfits</h3>
-                    <p class="product-info">أزياء الخروج، الكاجوال، والملابس اليومية العصرية بتصاميم مريحة.</p>
-                    <a href="https://www.instagram.com/deemaboutiquee" target="_blank" class="view-link"><i class="fab fa-instagram"></i> View Collection</a>
-                    <a href="#payment" class="btn-payment">Payment Methods</a>
-                </article>
-
-                <article class="product-card category-card">
-                    <img src="images/project4.jpg" alt="Abayas & Custom Designs">
-                    <h3>Abayas & Custom Designs</h3>
-                    <p class="product-info">تصاميم العبايات، وخدمة التفصيل الكامل حسب مواصفات الزبون الخاصة.</p>
-                    <a href="https://www.instagram.com/deemaboutiquee" target="_blank" class="view-link"><i class="fab fa-instagram"></i> View Collection</a>
-                    <a href="#payment" class="btn-payment">Payment Methods</a>
-                </article>
-
-                <article class="product-card">
-                    <img src="images/project5.jpg" alt="Featured Product 5">
-                    <h3>Featured: Modern Business Outfit</h3>
-                    <p class="product-info">طقم رسمي / كاجوال للعمل أو اللقاءات.</p>
-                    <a href="https://www.instagram.com/deemaboutiquee" target="_blank" class="btn-order"><i class="fab fa-instagram"></i> Order via Instagram</a>
-                    <a href="#payment" class="btn-payment">Payment Methods</a>
-                </article>
-
-                <article class="product-card">
-                    <img src="images/project6.jpg" alt="Featured Product 6">
-                    <h3>Featured: Latest Summer Collection</h3>
-                    <p class="product-info">أحد تصاميم أزياء الصيف الأخيرة.</p>
-                    <a href="https://www.instagram.com/deemaboutiquee" target="_blank" class="btn-order"><i class="fab fa-instagram"></i> Order via Instagram</a>
-                    <a href="#payment" class="btn-payment">Payment Methods</a>
-                </article>
-
-            </div>
-        </section>
-
-        <section id="skills">
-            <h2>My Skills & Tools (Technical)</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <i class="fas fa-cut"></i> 
-                    <h3>Design & Tailoring</h3>
-                    <p>My main professional skill, covering pattern drafting, sewing techniques, and custom garment creation.</p>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-file-invoice"></i> 
-                    <h3>Technical Documentation</h3>
-                    <p>Ability to create clear, precise reports and content relevant to Oil & Gas technology and business.</p>
-                </div>
-                <div class="skill-card">
-                    <i class="far fa-file-word"></i> 
-                    <h3>Microsoft Word</h3>
-                    <p>Core tool for drafting all written content, reports, and documentation effectively.</p>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-chart-bar"></i> 
-                    <h3>MS Office Suite</h3>
-                    <p>Proficient in Excel and PowerPoint for data analysis, financial tracking, and presentations.</p>
-                </div>
-            </div>
-        </section>
-        
-        <section id="payment" class="alt-bg">
-            <h2>Payment & Ordering Information</h2>
-            <p>لإتمام الطلب، يرجى التواصل معنا أولاً عبر الواتساب أو انستغرام لتأكيد التفاصيل. يمكن الدفع عبر الطرق التالية:</p>
-            
-            <div class="payment-grid">
-                
-                <div class="payment-card">
-                    <i class="fab fa-whatsapp"></i>
-                    <h3>Business WhatsApp</h3>
-                    <p>لطلب سريع و الاستفسارات:</p>
-                    <p class="contact-detail">+964 775 600 0447</p>
-                    <a href="https://wa.me/9647756000447" target="_blank" class="btn-payment-small">Send Message</a>
-                </div>
-
-                <div class="payment-card">
-                    <i class="fas fa-credit-card"></i>
-                    <h3>Qi Card Payment</h3>
-                    <p>يمكن الدفع مباشرةً عبر بطاقة كي كارد:</p>
-                    <p class="contact-detail">7147028117</p>
-                </div>
-
-                <div class="payment-card">
-                    <i class="fas fa-money-bill-wave"></i>
-                    <h3>Cash on Delivery</h3>
-                    <p>الدفع نقداً عند استلام المنتج (حسب مناطق التوصيل).</p>
-                </div>
-            </div>
-        </section>
-
-
-        <section id="contact">
-            <h2>Get In Touch</h2>
-            <p>I'm open to discussing new commissions, collaborations, and career opportunities.</p>
-            <div class="contact-info">
-                <p><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:deemahussein18@gmail.com">deemahussein18@gmail.com</a></p>
-                <p><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Samawah, Al Muthanna, Iraq</p>
-                <p class="instagram-link"><i class="fab fa-instagram"></i> <strong>Instagram:</strong> <a href="https://www.instagram.com/deemaboutiquee?igsh=cmNxcTMzY3JldG96&utm_source=qr" target="_blank">@deemaboutiquee</a></p>
-            </div>
-        </section>
-    </main>
-
-    <div id="gray-suit-modal" class="product-details-modal modal">
+<div id="gray-suit-modal" class="product-details-modal modal">
         <div class="modal-content">
             <span class="close-btn details-close-btn">&times;</span>
             
@@ -184,8 +8,13 @@
                     <img src="images/gray_suit_2.jpg" alt="Gray Suit Image 2" class="gallery-image">
                     <img src="images/gray_suit_3.jpg" alt="Gray Suit Image 3" class="gallery-image">
                     
+                    <img src="images/gray_suit_4.jpg" alt="Gray Suit Image 4" class="gallery-image">
+                    <img src="images/gray_suit_5.jpg" alt="Gray Suit Image 5" class="gallery-image">
+                    
                     <div class="gallery-nav">
                         <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
                         <span class="dot"></span>
                         <span class="dot"></span>
                     </div>
@@ -199,17 +28,6 @@
                         <span class="price-label">السعر:</span>
                         <span class="product-price">110,000 د.ع.</span>
                     </div>
-
-                    <div class="specs-list">
-                        <h3>Product Specifications:</h3>
-                        <ul>
-                            <li>الجاكيت مُبطن بالكامل</li>
-                            <li>طول الجاكيت من الأمام: 65cm</li>
-                            <li>طول الجاكيت من الخلف: 60cm</li>
-                            <li>طول البنطرون: 105cm</li>
-                        </ul>
-                    </div>
-                    
                     <a href="https://www.instagram.com/reel/DRIAGcNDRMQ/?igsh=MWF2dXU4OXQ5eWNiNw==" target="_blank" class="btn-reel btn-large"><i class="fab fa-instagram"></i> شاهد الريلز والقياسات على انستغرام</a>
                     
                     <a href="https://www.instagram.com/deemaboutiquee" target="_blank" class="btn-order btn-large">اطلب الآن عبر انستغرام</a>
@@ -218,6 +36,105 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
-</body>
-</html>
+    ```
+
+---
+
+## 2. 💡 الملف الثاني: script.js (تحديث وظيفة المعرض)
+
+الشيء الجيد هو أن الكود الموجود في `script.js` والمختص بمعرض الصور لا يحتاج لتغيير كبير، لأنه يستخدم عدد النقاط والصور الموجودة في ملف `index.html` تلقائياً. **ولكن** يجب أن نتأكد أن الكود كامل لديك.
+
+**الرجاء التأكد من أن ملف `script.js` لديك يحتوي على هذا الكود بالضبط (لضمان عمل الـ 5 صور):**
+
+```javascript
+document.addEventListener('DOMContentLoaded', (event) => {
+    // ----------------------------------------------------------------------
+    // 1. Welcome Modal Functionality (نافذة الترحيب)
+    // ----------------------------------------------------------------------
+    const welcomeModal = document.getElementById("welcomeModal");
+    const closeBtn = document.querySelector(".close-btn");
+    const enterBtn = document.getElementById("modal-close-btn");
+
+    // Show the modal on page load
+    welcomeModal.style.display = "block";
+
+    // Close modal when user clicks on (x) or "Enter Site"
+    closeBtn.onclick = function() {
+        welcomeModal.style.display = "none";
+    }
+    enterBtn.onclick = function() {
+        welcomeModal.style.display = "none";
+    }
+    // Close modal if user clicks outside of it
+    window.onclick = function(event) {
+        if (event.target == welcomeModal) {
+            welcomeModal.style.display = "none";
+        }
+    }
+
+
+    // ----------------------------------------------------------------------
+    // 2. Product Details Modal Functionality (نافذة تفاصيل المنتج)
+    // ----------------------------------------------------------------------
+    const graySuitModal = document.getElementById("gray-suit-modal");
+    const openBtn = document.querySelector('[data-product-id="gray-suit"]');
+    const closeDetailsBtn = graySuitModal.querySelector(".details-close-btn");
+
+    // Open the details modal
+    openBtn.onclick = function() {
+        graySuitModal.style.display = "block";
+        currentImageIndex = 0; // Reset gallery to first image
+        showImage(currentImageIndex);
+    }
+
+    // Close the details modal
+    closeDetailsBtn.onclick = function() {
+        graySuitModal.style.display = "none";
+    }
+
+    // Close modal if user clicks outside of it
+    window.onclick = function(event) {
+        if (event.target == graySuitModal) {
+            graySuitModal.style.display = "none";
+        }
+        // Keep the welcome modal check
+        if (event.target == welcomeModal) {
+            welcomeModal.style.display = "none";
+        }
+    }
+
+    // ----------------------------------------------------------------------
+    // 3. Image Gallery Functionality (معرض الصور داخل النافذة المنبثقة)
+    // ----------------------------------------------------------------------
+    let currentImageIndex = 0;
+    const images = graySuitModal.querySelectorAll('.gallery-image');
+    const dots = graySuitModal.querySelectorAll('.dot');
+
+    function showImage(n) {
+        images.forEach(img => img.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+        
+        // Loop functionality
+        if (n >= images.length) {
+            currentImageIndex = 0;
+        } else if (n < 0) {
+            currentImageIndex = images.length - 1;
+        } else {
+            currentImageIndex = n;
+        }
+
+        images[currentImageIndex].classList.add('active');
+        dots[currentImageIndex].classList.add('active');
+    }
+
+    // Add event listeners to dots for navigation
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            showImage(index);
+        });
+    });
+
+    // Initialize the gallery when the page loads
+    showImage(0); 
+
+});
