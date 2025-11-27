@@ -1,31 +1,176 @@
-/* General Reset and Styling (Previous code is kept) */
+/* General Reset and Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a1a; /* Dark background */
+    color: #f0f0f0; /* Light text */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+a {
+    color: #4CAF50; /* Green accent for links */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+a:hover {
+    color: #66BB6A;
+}
+section {
+    padding: 60px 20px;
+}
+h1, h2, h3 {
+    color: #fff;
+    margin-top: 0;
+}
+h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 15px;
+    display: inline-block;
+}
 
-/* ... (Your previous CSS code is here) ... */
+/* Header and Navigation */
+header {
+    background: #252525;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.logo {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #4CAF50;
+}
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.nav-links li {
+    margin-left: 20px;
+}
+.nav-links a {
+    color: #f0f0f0;
+    padding: 5px 10px;
+    border-bottom: 2px solid transparent;
+}
+.nav-links a:hover {
+    color: #4CAF50;
+    border-bottom: 2px solid #4CAF50;
+}
 
-/* --- NEW STYLES FOR PRODUCTS AND PAYMENT --- */
+/* Hero/Profile Section */
+#profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 20px;
+    text-align: center;
+}
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #4CAF50;
+    margin-bottom: 20px;
+}
+.profile-header {
+    margin-bottom: 20px;
+}
+.name-sub {
+    font-size: 1.2em;
+    color: #bbb;
+}
+.role-sub {
+    color: #4CAF50;
+    font-weight: bold;
+}
+#profile h1 {
+    font-size: 3em;
+    margin: 5px 0 15px 0;
+}
+.bio {
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    color: #ccc;
+}
+.btn-primary {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+.btn-primary:hover {
+    background-color: #66BB6A;
+}
 
-/* Product Cards in the grid (Used for categories and featured products) */
+/* Products Grid */
+#products {
+    background-color: #252525;
+}
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
 .product-card {
-    /* Keep the same styling as .project-card for consistency */
     background: #1a1a1a;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     text-align: left;
     transition: transform 0.3s;
-    display: flex; /* Flexbox for better layout control */
+    display: flex; /* لضمان أن الأزرار تكون في الأسفل */
     flex-direction: column;
 }
-
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+}
+.product-card img {
+    width: 100%;
+    height: 200px; /* حجم ثابت للصور */
+    object-fit: cover; /* لقص الصور وتناسبها دون تشويهها */
+    display: block;
+}
 .product-card h3 {
+    padding: 15px 15px 5px 15px;
     font-size: 1.2em;
 }
-
 .product-info {
     padding: 0 15px 10px 15px;
     font-size: 0.9em;
     color: #ccc;
-    flex-grow: 1; /* Allows text to grow and push buttons down */
+    flex-grow: 1; 
+}
+.view-link {
+    display: block;
+    text-align: center;
+    padding: 10px 15px;
+    margin: 5px 15px 15px 15px;
+    background-color: #4CAF50;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
 /* Style for Order and Payment Buttons under Products */
@@ -35,20 +180,18 @@
     background-color: #E1306C; /* Instagram Pink/Red */
     color: white;
     padding: 10px 15px;
-    margin: 0 15px 5px 15px; /* Margin to separate from payment button */
+    margin: 0 15px 5px 15px;
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s;
 }
-
 .btn-order:hover {
     background-color: #C1205C;
 }
-
 .btn-payment {
     display: block;
     text-align: center;
-    background-color: #4CAF50; /* Green accent */
+    background-color: #383838; /* Dark gray for subtle look */
     color: white;
     padding: 10px 15px;
     margin: 5px 15px 15px 15px;
@@ -57,10 +200,40 @@
     font-size: 0.9em;
     transition: background-color 0.3s;
 }
-
 .btn-payment:hover {
-    background-color: #66BB6A;
+    background-color: #555555;
 }
+
+/* Skills Grid (Kept mostly the same) */
+#skills {
+    background-color: #1a1a1a;
+}
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+.skill-card {
+    background: #252525;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+.skill-card i {
+    font-size: 3em;
+    color: #4CAF50;
+    margin-bottom: 15px;
+}
+.skill-card h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+.skill-card p {
+    color: #ccc;
+    font-size: 0.9em;
+}
+
 
 /* Payment Section Styling */
 #payment {
@@ -71,47 +244,92 @@
     max-width: 900px;
     margin: 0 auto;
 }
-
 .payment-methods p {
     font-size: 1.1em;
     margin-bottom: 30px;
 }
-
 .payment-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     text-align: center;
 }
-
 .payment-card {
     background: #1a1a1a;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
-
 .payment-card i {
     font-size: 3em;
     color: #4CAF50;
     margin-bottom: 15px;
 }
-
 .payment-card h3 {
     font-size: 1.4em;
     margin-bottom: 10px;
 }
-
 .payment-card p {
     color: #ccc;
     font-size: 0.9em;
 }
+.contact-detail {
+    font-size: 1.2em !important;
+    font-weight: bold;
+    color: #fff;
+    margin: 5px 0 !important;
+}
+.btn-payment-small {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 0.9em;
+}
 
 /* Contact Section Enhancements */
+#contact {
+    background-color: #1a1a1a;
+}
+.contact-info {
+    text-align: left;
+}
 .instagram-link {
     font-size: 1.1em;
     margin: 10px 0;
 }
 .instagram-link i {
     color: #E1306C; /* Instagram Icon Color */
+}
+
+/* Footer */
+footer {
+    background: #111;
+    color: #888;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+/* Modal Styling */
+.modal {
+    /* ... (Modal styles are kept) ... */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; 
+    }
+    nav {
+        justify-content: center;
+    }
+    #profile h1 {
+        font-size: 2.5em;
+    }
+    .modal-content {
+        width: 90%;
+        margin: 15% auto;
+    }
 }
