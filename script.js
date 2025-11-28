@@ -1,3 +1,5 @@
+
+// (الكود يبقى كما هو، يعمل بشكل صحيح مع HTML و CSS الجديد)
 document.addEventListener('DOMContentLoaded', (event) => {
     // ----------------------------------------------------------------------
     // 1. Welcome Modal Functionality (نافذة الترحيب)
@@ -65,6 +67,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         images.forEach(img => img.classList.remove('active'));
         dots.forEach(dot => dot.classList.remove('active'));
         
+        // Loop functionality
         if (n >= images.length) {
             currentImageIndex = 0;
         } else if (n < 0) {
