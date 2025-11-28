@@ -6,15 +6,16 @@
     <title>Deema Boutique - Designer & Tailoring</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <div id="welcomeModal" class="modal">
         <div class="modal-content">
             <span class="close-btn">&times;</span>
-            <h2>Welcome to Deema Boutique!</h2>
-            <p>I share my latest designs in tailoring, fashion, and academic updates. Thank you for visiting!</p>
-            <button id="modal-close-btn">Enter Site</button>
+            <h2>مرحباً بك في ديما بوتيك!</h2>
+            <p>أشارك أحدث تصاميمي في الخياطة والأزياء. شكراً لزيارتكم!</p>
+            <button id="modal-close-btn">الدخول للموقع</button>
         </div>
     </div>
 
@@ -22,11 +23,10 @@
         <nav>
             <div class="logo">Deema Boutique</div>
             <ul class="nav-links">
-                <li><a href="#profile">Profile</a></li>
-                <li><a href="#products">Products</a></li> 
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#payment">Payment</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#profile">الرئيسية</a></li>
+                <li><a href="#products">المنتجات</a></li> 
+                <li><a href="#payment">طرق الدفع</a></li>
+                <li><a href="#contact">تواصل</a></li>
             </ul>
         </nav>
     </header>
@@ -37,125 +37,84 @@
             
             <div class="profile-header">
                 <p class="name-sub">Deema Hussein</p>
-                <p class="role-sub">Designer & Oil/Gas Student</p>
+                <p class="role-sub">مصممة أزياء وخياطة</p>
             </div>
 
-            <h1>Hi, I'm Deema Hussein</h1>
+            <h1>ديما بوتيك: تصاميم عصرية بتفاصيل فاخرة</h1>
             <p class="bio">
-                I am a passionate student in Oil and Gas Refining Technology, based in Samawah, Iraq. My true passion lies in **Design and Tailoring**, where I manage my own successful freelance business. 
+                مرحباً بك! أنا ديما حسين، شغفي يكمن في **تصميم الأزياء والخياطة**، حيث أقوم بإدارة عملي الخاص بنجاح.
                 <br>
                 <br>
-                **Welcome to Deema Boutique!** Browse our latest designs and contact us to order.
+                **اكتشف أحدث التصاميم** والأطقم الرسمية وفساتين السهرة. تواصل معنا للطلب والتفصيل حسب قياسك الخاص.
             </p>
-            <a href="#products" class="btn-primary">View Products</a>
+            <a href="#products" class="btn-primary">شاهد المنتجات المميزة</a>
         </section>
 
         <section id="products">
-            <h2>Featured Designs & Collections</h2>
+            <h2>أحدث التصاميم والمجموعات</h2>
+            <p class="section-subtitle">يتم إضافة منتجات جديدة قريباً! تفضل بمشاهدة التصاميم الحالية:</p>
             <div class="products-grid">
                 
                 <article class="product-card featured-product">
                     <img src="images/profile1.jpg" alt="Gray Formal Suit">
-                    <h3>Gray Formal Formal Suit</h3>
+                    <h3>الطقم الرسمي الرمادي (Featured)</h3>
                     <p class="product-info">طقم رسمي نسائي باللون الرمادي الفاتح. اضغط على الزر لمشاهدة جميع الصور والتفاصيل والسعر.</p>
                     
-                    <button class="btn-primary btn-details" data-product-id="gray-suit">View Details & Price</button>
-                    <a href="#payment" class="btn-payment">Payment Methods</a>
+                    <button class="btn-primary btn-details" data-product-id="gray-suit">تفاصيل وسعر المنتج</button>
+                    <a href="#payment" class="btn-payment">طرق الدفع</a>
                 </article>
 
-                <article class="product-card category-card">
+                <article class="product-card category-card category-placeholder">
                     <img src="images/project2.jpg" alt="Evening Wear Category">
-                    <h3>Official & Evening Wear</h3>
-                    <p class="product-info">فساتين السهرة، ملابس المناسبات، والتفصيل حسب الطلب بجودة عالية.</p>
-                    <a href="https://www.instagram.com/deemaboutiquee" target="_blank" class="view-link"><i class="fab fa-instagram"></i> View Collection</a>
-                    <a href="#payment" class="btn-payment">Payment Methods</a>
+                    <h3>ملابس السهرة والمناسبات</h3>
+                    <p class="product-info">فساتين السهرة والتفصيل حسب الطلب. قريباً ستضاف هنا المزيد من المنتجات مع تفاصيلها.</p>
+                    <a href="https://www.instagram.com/deemaboutiquee" target="_blank" class="view-link"><i class="fab fa-instagram"></i> عرض المجموعة على انستغرام</a>
+                    <a href="#payment" class="btn-payment">طرق الدفع</a>
                 </article>
 
-                <article class="product-card category-card">
+                <article class="product-card category-card category-placeholder">
                     <img src="images/project3.jpg" alt="Casual Outfits Category">
-                    <h3>Casual & Daily Outfits</h3>
-                    <p class="product-info">أزياء الخروج، الكاجوال، والملابس اليومية العصرية بتصاميم مريحة.</p>
-                    <a href="https://www.instagram.com/deemaboutiquee" target="_blank" class="view-link"><i class="fab fa-instagram"></i> View Collection</a>
-                    <a href="#payment" class="btn-payment">Payment Methods</a>
+                    <h3>أزياء الخروج والكاجوال</h3>
+                    <p class="product-info">أزياء يومية عصرية ومريحة. ترقبوا الإضافات الجديدة قريباً!</p>
+                    <a href="https://www.instagram.com/deemaboutiquee" target="_blank" class="view-link"><i class="fab fa-instagram"></i> عرض المجموعة على انستغرام</a>
+                    <a href="#payment" class="btn-payment">طرق الدفع</a>
                 </article>
 
-                <article class="product-card category-card">
+                <article class="product-card category-card category-placeholder">
                     <img src="images/project4.jpg" alt="Abayas & Custom Designs">
-                    <h3>Abayas & Custom Designs</h3>
-                    <p class="product-info">تصاميم العبايات، وخدمة التفصيل الكامل حسب مواصفات الزبون الخاصة.</p>
-                    <a href="https://www.instagram.com/deemaboutiquee" target="_blank" class="view-link"><i class="fab fa-instagram"></i> View Collection</a>
-                    <a href="#payment" class="btn-payment">Payment Methods</a>
+                    <h3>عبايات وتصاميم خاصة</h3>
+                    <p class="product-info">خدمة التفصيل الكامل حسب مواصفاتكم. تواصلوا معنا للبدء بتصميمكم الخاص.</p>
+                    <a href="https://www.instagram.com/deemaboutiquee" target="_blank" class="view-link"><i class="fab fa-instagram"></i> اطلب تصميم خاص</a>
+                    <a href="#payment" class="btn-payment">طرق الدفع</a>
                 </article>
 
-                <article class="product-card">
-                    <img src="images/project5.jpg" alt="Featured Product 5">
-                    <h3>Featured: Modern Business Outfit</h3>
-                    <p class="product-info">طقم رسمي / كاجوال للعمل أو اللقاءات.</p>
-                    <a href="https://www.instagram.com/deemaboutiquee" target="_blank" class="btn-order"><i class="fab fa-instagram"></i> Order via Instagram</a>
-                    <a href="#payment" class="btn-payment">Payment Methods</a>
-                </article>
-
-                <article class="product-card">
-                    <img src="images/project6.jpg" alt="Featured Product 6">
-                    <h3>Featured: Latest Summer Collection</h3>
-                    <p class="product-info">أحد تصاميم أزياء الصيف الأخيرة.</p>
-                    <a href="https://www.instagram.com/deemaboutiquee" target="_blank" class="btn-order"><i class="fab fa-instagram"></i> Order via Instagram</a>
-                    <a href="#payment" class="btn-payment">Payment Methods</a>
-                </article>
-
-            </div>
+                </div>
         </section>
 
-        <section id="skills">
-            <h2>My Skills & Tools (Technical)</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <i class="fas fa-cut"></i> 
-                    <h3>Design & Tailoring</h3>
-                    <p>My main professional skill, covering pattern drafting, sewing techniques, and custom garment creation.</p>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-file-invoice"></i> 
-                    <h3>Technical Documentation</h3>
-                    <p>Ability to create clear, precise reports and content relevant to Oil & Gas technology and business.</p>
-                </div>
-                <div class="skill-card">
-                    <i class="far fa-file-word"></i> 
-                    <h3>Microsoft Word</h3>
-                    <p>Core tool for drafting all written content, reports, and documentation effectively.</p>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-chart-bar"></i> 
-                    <h3>MS Office Suite</h3>
-                    <p>Proficient in Excel and PowerPoint for data analysis, financial tracking, and presentations.</p>
-                </div>
-            </div>
-        </section>
-        
         <section id="payment" class="alt-bg">
-            <h2>Payment & Ordering Information</h2>
+            <h2>معلومات الطلب والدفع</h2>
             <p>لإتمام الطلب، يرجى التواصل معنا أولاً عبر الواتساب أو انستغرام لتأكيد التفاصيل. يمكن الدفع عبر الطرق التالية:</p>
             
             <div class="payment-grid">
                 
                 <div class="payment-card">
                     <i class="fab fa-whatsapp"></i>
-                    <h3>Business WhatsApp</h3>
+                    <h3>واتساب العمل</h3>
                     <p>لطلب سريع و الاستفسارات:</p>
                     <p class="contact-detail">+964 775 600 0447</p>
-                    <a href="https://wa.me/9647756000447" target="_blank" class="btn-payment-small">Send Message</a>
+                    <a href="https://wa.me/9647756000447" target="_blank" class="btn-payment-small">إرسال رسالة</a>
                 </div>
 
                 <div class="payment-card">
                     <i class="fas fa-credit-card"></i>
-                    <h3>Qi Card Payment</h3>
+                    <h3>الدفع ببطاقة كي كارد</h3>
                     <p>يمكن الدفع مباشرةً عبر بطاقة كي كارد:</p>
                     <p class="contact-detail">7147028117</p>
                 </div>
 
                 <div class="payment-card">
                     <i class="fas fa-money-bill-wave"></i>
-                    <h3>Cash on Delivery</h3>
+                    <h3>الدفع عند الاستلام</h3>
                     <p>الدفع نقداً عند استلام المنتج (حسب مناطق التوصيل).</p>
                 </div>
             </div>
@@ -163,12 +122,13 @@
 
 
         <section id="contact">
-            <h2>Get In Touch</h2>
-            <p>I'm open to discussing new commissions, collaborations, and career opportunities.</p>
+            <h2>تواصل معنا</h2>
+            <p>نرحب بطلبات التفصيل الخاصة والتعاونات الجديدة. جاهزون للرد على استفساراتكم!</p>
             <div class="contact-info">
-                <p><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:deemahussein18@gmail.com">deemahussein18@gmail.com</a></p>
-                <p><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Samawah, Al Muthanna, Iraq</p>
-                <p class="instagram-link"><i class="fab fa-instagram"></i> <strong>Instagram:</strong> <a href="https://www.instagram.com/deemaboutiquee?igsh=cmNxcTMzY3JldG96&utm_source=qr" target="_blank">@deemaboutiquee</a></p>
+                <p><i class="fas fa-envelope"></i> <strong>البريد الإلكتروني:</strong> <a href="mailto:deemahussein18@gmail.com">deemahussein18@gmail.com</a></p>
+                <p><i class="fas fa-map-marker-alt"></i> <strong>الموقع:</strong> السماوة، المثنى، العراق</p>
+                <p class="instagram-link"><i class="fab fa-instagram"></i> <strong>انستغرام:</strong> <a href="https://www.instagram.com/deemaboutiquee?igsh=cmNxcTMzY3JldG96&utm_source=qr" target="_blank">@deemaboutiquee</a></p>
+                <p class="tiktok-link"><i class="fab fa-tiktok"></i> <strong>تيك توك:</strong> <a href="https://www.tiktok.com/@deemaaboutiquee?_t=ZS-90cTEfpuSor&_r=1" target="_blank">@deemaaboutiquee</a></p>
             </div>
         </section>
     </main>
@@ -182,7 +142,6 @@
                     <img src="images/profile1.jpg" alt="Gray Suit Image 1" class="gallery-image active">
                     <img src="images/gray_suit_2.jpg" alt="Gray Suit Image 2" class="gallery-image">
                     <img src="images/gray_suit_3.jpg" alt="Gray Suit Image 3" class="gallery-image">
-                    
                     <img src="images/gray_suit_4.jpg" alt="Gray Suit Image 4" class="gallery-image">
                     <img src="images/gray_suit_5.jpg" alt="Gray Suit Image 5" class="gallery-image">
                     
@@ -196,7 +155,7 @@
                 </div>
 
                 <div class="product-specs">
-                    <h2>Gray Formal Suit (The Latest)</h2>
+                    <h2>الطقم الرسمي الرمادي (أحدث التصاميم)</h2>
                     <p class="product-material">المتيريال: **قطن مع كريب ثقيل**</p>
 
                     <div class="price-box">
@@ -205,7 +164,7 @@
                     </div>
 
                     <div class="specs-list">
-                        <h3>Product Specifications:</h3>
+                        <h3>تفاصيل المنتج:</h3>
                         <ul>
                             <li>الجاكيت مُبطن بالكامل</li>
                             <li>طول الجاكيت من الأمام: 65cm</li>
