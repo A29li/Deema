@@ -1,537 +1,216 @@
 /* General Reset and Styling */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #1a1a1a; /* Dark background */
+    /* الخطوط: Cairo للعربية (Elegant Arabic) و Poppins للغة الإنجليزية/الأرقام (Modern Numbers) */
+    font-family: 'Cairo', 'Poppins', sans-serif;
+    background-color: #151515; /* Darker, richer background */
     color: #f0f0f0; /* Light text */
     line-height: 1.6;
     margin: 0;
     padding: 0;
     text-align: center;
 }
+/* تخصيص أحجام خطوط البداية */
+h1 {
+    font-size: 3.2em !important; /* زيادة الحجم */
+    font-weight: 700;
+    letter-spacing: 1px; /* إضافة تباعد للاحرف */
+}
+h2 {
+    font-size: 2.6em !important; /* زيادة الحجم */
+    font-weight: 700;
+}
+p {
+    font-size: 1.15em; /* زيادة وضوح النص العام */
+}
+.section-subtitle {
+    font-size: 1.3em;
+    color: #bbb;
+    margin-bottom: 40px;
+}
+
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }
 a {
-    color: #4CAF50; /* Green accent for links */
+    color: #A08A6F; /* لون ذهبي/نحاسي جديد لمظهر فخم */
     text-decoration: none;
     transition: color 0.3s;
 }
 a:hover {
-    color: #66BB6A;
+    color: #C0A88F;
 }
 section {
-    padding: 60px 20px;
+    padding: 80px 20px; /* زيادة التباعد بين الأقسام */
 }
 h1, h2, h3 {
     color: #fff;
     margin-top: 0;
 }
 h2 {
-    font-size: 2em;
     margin-bottom: 40px;
-    border-bottom: 2px solid #333;
+    border-bottom: 3px solid #A08A6F; /* حدود باللون الذهبي */
     padding-bottom: 15px;
     display: inline-block;
 }
 
 /* Header and Navigation */
 header {
-    background: #252525;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    background: #1e1e1e; /* خلفية داكنة للـ Header */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
     position: sticky;
     top: 0;
     z-index: 100;
 }
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+/* ... (باقي أكواد التنقل) ... */
 .logo {
     font-weight: bold;
-    font-size: 1.5em;
-    color: #4CAF50;
-}
-.nav-links {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-.nav-links li {
-    margin-left: 20px;
-}
-.nav-links a {
-    color: #f0f0f0;
-    padding: 5px 10px;
-    border-bottom: 2px solid transparent;
+    font-size: 1.9em; 
+    color: #A08A6F; /* شعار باللون الذهبي */
+    font-family: 'Poppins', serif;
 }
 .nav-links a:hover {
-    color: #4CAF50;
-    border-bottom: 2px solid #4CAF50;
+    color: #A08A6F;
+    border-bottom: 2px solid #A08A6F;
 }
 
 /* Hero/Profile Section */
 #profile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 80px 20px;
-    text-align: center;
+    background: url('images/hero_bg.jpg') no-repeat center center/cover; /* يمكنك إضافة صورة خلفية هادئة هنا */
+    padding: 100px 20px;
 }
 .profile-pic {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid #4CAF50;
-    margin-bottom: 20px;
-}
-.profile-header {
-    margin-bottom: 20px;
-}
-.name-sub {
-    font-size: 1.2em;
-    color: #bbb;
+    width: 190px;
+    height: 190px;
+    border: 6px solid #A08A6F; /* إطار ذهبي أنيق */
+    box-shadow: 0 0 15px rgba(160, 138, 111, 0.5);
 }
 .role-sub {
-    color: #4CAF50;
-    font-weight: bold;
-}
-#profile h1 {
-    font-size: 3em;
-    margin: 5px 0 15px 0;
-}
-.bio {
-    max-width: 700px;
-    margin: 0 auto 30px auto;
-    color: #ccc;
+    color: #A08A6F;
 }
 .btn-primary {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 30px;
-    border-radius: 50px;
-    font-weight: bold;
-    transition: background-color 0.3s;
-    border: none;
-    cursor: pointer;
+    background-color: #A08A6F; /* زر ذهبي */
+    color: #151515; /* نص داكن على الزر الفاتح */
+    padding: 18px 45px;
+    font-size: 1.3em; 
+    border-radius: 5px; /* شكل مربع أكثر فخامة */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 .btn-primary:hover {
-    background-color: #66BB6A;
+    background-color: #C0A88F;
 }
 
 /* Products Grid */
 #products {
-    background-color: #252525;
+    background-color: #1e1e1e;
 }
 .products-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* توسيع بطاقات المنتجات */
 }
 .product-card {
-    background: #1a1a1a;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    text-align: left;
-    transition: transform 0.3s;
-    display: flex; 
-    flex-direction: column;
+    background: #252525;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
 }
 .product-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
-}
-.product-card img {
-    width: 100%;
-    height: 200px; /* حجم ثابت للصور */
-    object-fit: cover; /* لقص الصور وتناسبها دون تشويهها */
-    display: block;
+    transform: scale(1.02); /* تأثير أكبر عند المرور */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
 }
 .product-card h3 {
-    padding: 15px 15px 5px 15px;
-    font-size: 1.2em;
+    font-size: 1.5em; 
+    color: #A08A6F;
 }
 .product-info {
-    padding: 0 15px 10px 15px;
-    font-size: 0.9em;
-    color: #ccc;
-    flex-grow: 1; 
-}
-.view-link {
-    display: block;
-    text-align: center;
-    padding: 10px 15px;
-    margin: 5px 15px 15px 15px;
-    background-color: #4CAF50;
-    border-radius: 5px;
-    font-weight: bold;
+    color: #d0d0d0;
+    font-size: 1.1em;
 }
 
 /* Style for Order and Payment Buttons under Products */
 .btn-details {
-    margin-bottom: 5px !important;
+    background-color: #A08A6F;
+    color: #151515;
+    font-size: 1.2em;
+}
+.btn-details:hover {
+    background-color: #C0A88F;
 }
 .btn-order {
-    display: block;
-    text-align: center;
-    background-color: #E1306C; /* Instagram Pink/Red */
-    color: white;
-    padding: 10px 15px;
-    margin: 0 15px 5px 15px;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s;
-}
-.btn-order:hover {
-    background-color: #C1205C;
+    background-color: #E1306C; /* Instagram Color - لم يتغير */
 }
 .btn-payment {
-    display: block;
-    text-align: center;
-    background-color: #383838; /* Dark gray for subtle look */
-    color: white;
-    padding: 10px 15px;
-    margin: 5px 15px 15px 15px;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 0.9em;
-    transition: background-color 0.3s;
+    background-color: #383838;
+    color: #f0f0f0;
 }
 .btn-payment:hover {
-    background-color: #555555;
+    background-color: #4A4A4A;
 }
 
-/* Skills Grid */
-#skills {
-    background-color: #1a1a1a;
-}
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-}
-.skill-card {
-    background: #252525;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    text-align: center;
-}
-.skill-card i {
-    font-size: 3em;
-    color: #4CAF50;
-    margin-bottom: 15px;
-}
-.skill-card h3 {
-    font-size: 1.4em;
-    margin-bottom: 10px;
-}
-.skill-card p {
-    color: #ccc;
-    font-size: 0.9em;
-}
 
 /* Payment Section Styling */
 #payment {
-    background-color: #252525;
-}
-.payment-methods {
-    max-width: 900px;
-    margin: 0 auto;
-}
-.payment-methods p {
-    font-size: 1.1em;
-    margin-bottom: 30px;
-}
-.payment-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    text-align: center;
+    background-color: #151515;
 }
 .payment-card {
-    background: #1a1a1a;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background: #1e1e1e;
 }
 .payment-card i {
-    font-size: 3em;
-    color: #4CAF50;
-    margin-bottom: 15px;
-}
-.payment-card h3 {
-    font-size: 1.4em;
-    margin-bottom: 10px;
-}
-.payment-card p {
-    color: #ccc;
-    font-size: 0.9em;
-}
-.contact-detail {
-    font-size: 1.2em !important;
-    font-weight: bold;
-    color: #fff;
-    margin: 5px 0 !important;
+    color: #A08A6F; /* أيقونات الدفع باللون الذهبي */
 }
 .btn-payment-small {
-    display: inline-block;
-    background-color: #4CAF50;
-    color: white;
-    padding: 8px 15px;
-    border-radius: 5px;
-    margin-top: 10px;
-    font-size: 0.9em;
+    background-color: #A08A6F;
+    color: #151515;
+}
+.btn-payment-small:hover {
+    background-color: #C0A88F;
 }
 
 /* Contact Section Enhancements */
 #contact {
-    background-color: #1a1a1a;
+    background-color: #1e1e1e;
 }
-.contact-info {
-    text-align: left;
+.contact-info p {
+    text-align: center; /* إعادة المحاذاة للوسط للتواصل */
 }
-.instagram-link {
-    font-size: 1.1em;
-    margin: 10px 0;
+/* تنسيق أيقونة ورابط تيك توك */
+.tiktok-link {
+    font-size: 1.25em; /* حجم أكبر للتيك توك */
+    margin: 15px 0;
 }
-.instagram-link i {
-    color: #E1306C;
-}
-
-/* Footer */
-footer {
-    background: #111;
-    color: #888;
-    padding: 20px 0;
-    font-size: 0.9em;
-}
-
-/* --- Modal Styling --- */
-.modal {
-    display: none; 
-    position: fixed; 
-    z-index: 200; 
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgba(0,0,0,0.8); 
-    padding-top: 60px;
-}
-.modal-content {
-    background-color: #2c2c2c;
-    margin: 5% auto; 
-    padding: 40px;
-    border-radius: 10px;
-    width: 80%; 
-    max-width: 500px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-    color: #f0f0f0;
-}
-.modal-content h2 {
-    color: #4CAF50;
-}
-.close-btn, #modal-close-btn {
-    cursor: pointer;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    color: #aaa;
-}
-#modal-close-btn {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin-top: 20px;
-    border-radius: 5px;
-    font-size: 1em;
-    float: none;
-    display: block;
-    margin: 20px auto 0;
-}
-#modal-close-btn:hover {
-    background-color: #66BB6A;
-}
-
-/* --- New Modal for Product Details --- */
-
-.product-details-modal {
-    display: none; 
-    position: fixed;
-    z-index: 1001; 
-    padding-top: 50px; 
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.9);
-}
-
-.product-details-modal .modal-content {
-    background-color: #252525;
-    margin: 5% auto; 
-    padding: 20px;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 950px; 
-    position: relative;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7);
-}
-
-.details-layout {
-    display: flex;
-    gap: 30px;
-    text-align: left;
-}
-
-.image-gallery {
-    flex: 1; 
-    position: relative;
-    overflow: hidden;
-    border-radius: 8px;
-}
-
-.gallery-image {
-    width: 100%;
-    height: auto;
-    display: none; 
-    border-radius: 8px;
-}
-
-.gallery-image.active {
-    display: block; 
-}
-
-.gallery-nav {
-    text-align: center;
-    padding: 10px 0;
-}
-
-.dot {
-    height: 10px;
-    width: 10px;
-    margin: 0 5px;
-    background-color: #555;
+.tiktok-link i {
+    color: #69C9D0; /* لون تيك توك الأصلي */
+    background: #000;
     border-radius: 50%;
-    display: inline-block;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    padding: 2px;
 }
 
-.dot.active {
-    background-color: #4CAF50;
+/* --- Product Details Modal (نافذة تفاصيل المنتج) --- */
+.product-details-modal .modal-content {
+    background-color: #1e1e1e;
 }
-
-.product-specs {
-    flex: 1; 
-    padding-top: 10px;
-}
-
 .product-specs h2 {
-    font-size: 1.8em;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #333;
-    padding-bottom: 10px;
+    color: #fff;
+    border-bottom: 2px solid #A08A6F; /* فصل ذهبي أنيق */
 }
 .product-material {
-    color: #4CAF50;
-    font-size: 1.1em;
-    font-weight: bold;
+    color: #A08A6F;
 }
 
 .price-box {
-    background-color: #4CAF50; 
-    padding: 15px;
-    border-radius: 5px;
-    margin: 20px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #1a1a1a;
-    font-weight: bold;
-}
-
-.price-label {
-    font-size: 1.2em;
-}
-
-.product-price {
-    font-size: 1.8em;
+    background-color: #A08A6F; /* صندوق السعر الذهبي */
+    color: #151515; /* نص داكن */
 }
 
 .specs-list h3 {
-    font-size: 1.3em;
-    color: #4CAF50;
-    margin-top: 30px;
-    border-bottom: none;
-    padding-bottom: 0;
-}
-
-.specs-list ul {
-    list-style: none;
-    padding: 0;
-    text-align: left;
+    color: #A08A6F;
 }
 
 .specs-list li {
-    background: #333;
-    margin: 8px 0;
-    padding: 10px 15px;
-    border-radius: 4px;
-    font-size: 1em;
+    background: #333333; /* لون خلفية القائمة داكن */
 }
 
-/* Style for the Reel Button (NEW) */
 .btn-reel {
-    display: block;
-    text-align: center;
-    background-color: #383838; /* لون رمادي داكن لتمييزه عن زر الطلب */
-    color: white;
-    padding: 15px;
-    margin-top: 15px; 
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 1.1em;
-    transition: background-color 0.3s;
+    background-color: #383838; 
 }
 .btn-reel:hover {
     background-color: #555555;
-}
-
-.btn-large {
-    display: block;
-    margin-top: 30px;
-    font-size: 1.1em;
-    padding: 15px;
-}
-
-/* Responsive adjustment for mobile */
-@media (max-width: 768px) {
-    .product-details-modal .modal-content {
-        width: 95%;
-        margin: 10% auto;
-        padding: 10px;
-    }
-    .details-layout {
-        flex-direction: column; 
-        gap: 15px;
-    }
-    .product-specs h2 {
-        font-size: 1.5em;
-    }
-    .product-price {
-        font-size: 1.5em;
-    }
 }
