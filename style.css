@@ -113,10 +113,11 @@ nav {
     box-shadow: 0 0 15px rgba(160, 138, 111, 0.5);
 }
 .name-sub {
-    font-size: 1.8em;
+    /* تم تغيير الخط هنا لاسم المصممة بناءً على طلبك */
+    font-family: 'Marhey', sans-serif !important; 
+    font-size: 2.5em; /* زيادة حجم الخط الجديد ليبرز */
     font-weight: 700;
     margin-bottom: 5px;
-    font-family: 'Poppins', sans-serif;
 }
 .role-sub {
     color: #A08A6F;
@@ -149,9 +150,9 @@ nav {
     background-color: #1e1e1e;
 }
 .products-grid {
-    /* التعديل الجذري: نستخدم grid-template-columns لفرض 3 أعمدة متساوية على الشاشات الكبيرة */
+    /* التعديل الجذري: نستخدم grid-template-columns لفرض 4 أعمدة متساوية على الشاشات الكبيرة */
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* FORCES 3 equal columns */
+    grid-template-columns: repeat(4, 1fr); /* FORCES 4 equal columns */
     gap: 30px; 
 }
 .product-card {
@@ -211,13 +212,35 @@ nav {
     background-color: #C0A88F;
 }
 .btn-order {
-    background-color: #E1306C; 
+    background-color: #E1306C; /* لون انستغرام */
     color: #fff;
     font-size: 1.2em;
 }
 .btn-order:hover {
     background-color: #C1205C;
 }
+
+/* تنسيق الأزرار الجديدة داخل نافذة التفاصيل */
+.btn-whatsapp {
+    background-color: #25D366; /* لون الواتساب */
+    color: #fff;
+    margin-bottom: 10px;
+}
+.btn-whatsapp:hover {
+    background-color: #128C7E;
+}
+.btn-kicard {
+    background-color: #007bff; /* لون أزرق لكي كارد/Super Qi */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.btn-kicard:hover {
+    background-color: #0056b3;
+}
+/* نهاية تنسيق الأزرار الجديدة */
+
 .btn-payment {
     background-color: #383838;
     color: #f0f0f0;
@@ -225,15 +248,6 @@ nav {
 }
 .btn-payment:hover {
     background-color: #4A4A4A;
-}
-.category-placeholder .view-link {
-    background-color: #151515;
-    border: 1px solid #A08A6F;
-    color: #A08A6F;
-}
-.category-placeholder .view-link:hover {
-    background-color: #333333;
-    color: #fff;
 }
 
 
@@ -506,6 +520,13 @@ nav {
 
 
 /* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .products-grid {
+        /* عند الشاشات المتوسطة، نتحول لثلاثة أعمدة */
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 @media (max-width: 1024px) {
     .products-grid {
         /* عند الشاشات المتوسطة، نتحول لعمودين */
@@ -530,6 +551,9 @@ nav {
     .profile-pic {
         width: 150px;
         height: 150px;
+    }
+    .name-sub {
+        font-size: 2em; 
     }
     .bio {
         font-size: 1.1em;
