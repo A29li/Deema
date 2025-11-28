@@ -3,365 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>متجر ديما للأزياء الراقية | Deema Boutique</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Deema Hussein - المنتجات</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <nav class="container">
-            <div class="logo">Deema Boutique</div>
-            <ul class="nav-links">
-                <li><a href="#profile">الرئيسية</a></li>
-                <li><a href="#products">المنتجات</a></li>
-                <li><a href="#payment">طرق الدفع</a></li>
-                <li><a href="#contact">تواصل معنا</a></li>
-            </ul>
-        </nav>
+        <h1>Deema Hussein 💫</h1>
     </header>
 
     <main>
-        <section id="profile" class="alt-bg">
-            <div class="container">
-                <img src="images/profile_pic.jpg" alt="صورة ديما حسين" class="profile-pic">
-                <h1 class="name-sub">ديما حسين</h1>
-                <p class="role-sub">مصممة أزياء ومبتكرة محتوى</p>
-                <p class="bio">
-                    أهلاً بك في متجري الخاص! هنا تجدين أحدث التصاميم الراقية والقطع المميزة التي تناسب ذوقك الرفيع. جميع التصاميم بخياطة احترافية ومواد عالية الجودة.
-                </p>
-                <a href="#products" class="btn-primary">اكتشف منتجاتنا الآن</a>
-            </div>
-        </section>
-
-        <section id="products">
-            <h2>أحدث التصاميم والمجموعات</h2>
-            <p class="section-subtitle">إليك مجموعتنا الحالية من الأطقم والفساتين الراقية. اضغط على أي منتج للمزيد من التفاصيل:</p>
-            <div class="products-grid">
-                
-                <article class="product-card featured-product">
-                    <img src="images/image_gray_1.jpg" alt="الطقم الرسمي الرمادي">
-                    <h3>الطقم الرسمي الرمادي (Featured)</h3>
-                    <p class="product-info">طقم رسمي نسائي باللون الرمادي الفاتح، متوفر للتفصيل بمقاسات مختلفة.</p>
-                    <button class="btn-primary btn-details" data-product-id="gray-suit">تفاصيل وسعر المنتج</button>
-                    <a href="#payment" class="btn-payment">طرق الدفع</a>
-                </article>
-
-                <article class="product-card">
-                    <img src="images/image_fur_1.jpg" alt="جاكيت فرو مُبطن">
-                    <h3>جاكيت فرو مُبطن بالكامل</h3>
-                    <p class="product-info">جاكيت فرو أنيق ومُبطن بالكامل. متوفر باللون البرغندي فقط.</p>
-                    <button class="btn-primary btn-details" data-product-id="fur-jacket">تفاصيل وسعر المنتج</button>
-                    <a href="#payment" class="btn-payment">طرق الدفع</a>
-                </article>
-
-                <article class="product-card">
-                    <img src="images/image_suit_skirt_1.jpg" alt="طقم تنورة كاجول">
-                    <h3>طقم تنورة كاجول (ماروني / نيلي)</h3>
-                    <p class="product-info">طقم كاجوال بتنورة طويلة وسويتر. متوفر بألوان ماروني ونيلي وبأجود خامات Soft Suede.</p>
-                    <button class="btn-primary btn-details" data-product-id="skirt-suit">تفاصيل وسعر المنتج</button>
-                    <a href="#payment" class="btn-payment">طرق الدفع</a>
-                </article>
-
-                <article class="product-card">
-                    <img src="images/image_black_suit_1.jpg" alt="سوت رسمي أسود">
-                    <h3>سوت رسمي أسود أنيق</h3>
-                    <p class="product-info">طقم رسمي أسود ببليزر مبطنة وجاكة جانبية في البنطلون. متوفر بمقاسات متعددة.</p>
-                    <button class="btn-primary btn-details" data-product-id="black-suit">تفاصيل وسعر المنتج</button>
-                    <a href="#payment" class="btn-payment">طرق الدفع</a>
-                </article>
-
-                <article class="product-card">
-                    <img src="images/placeholder_evening_dress.jpg" alt="فستان سهرة تفصيل">
-                    <h3>منتج قادم قريباً (5)</h3>
-                    <p class="product-info">تصميم مخصص لفستان سهرة أنيق، متوفر للتفصيل حسب الطلب.</p>
-                    <button class="btn-primary btn-details" data-product-id="product-5">تفاصيل وسعر المنتج</button>
-                    <a href="#payment" class="btn-payment">طرق الدفع</a>
-                </article>
-                
-                <article class="product-card">
-                    <img src="images/placeholder_business_suit.jpg" alt="بدلة عمل نسائية">
-                    <h3>منتج قادم قريباً (6)</h3>
-                    <p class="product-info">بدلة عمل بخياطة راقية ومريحة، بألوان كلاسيكية.</p>
-                    <button class="btn-primary btn-details" data-product-id="product-6">تفاصيل وسعر المنتج</button>
-                    <a href="#payment" class="btn-payment">طرق الدفع</a>
-                </article>
-                
-                <article class="product-card">
-                    <img src="images/placeholder_casual_chic.jpg" alt="طقم كاجوال صيفي">
-                    <h3>منتج قادم قريباً (7)</h3>
-                    <p class="product-info">ملابس خروج مريحة وعصرية بتفاصيل مميزة.</p>
-                    <button class="btn-primary btn-details" data-product-id="product-7">تفاصيل وسعر المنتج</button>
-                    <a href="#payment" class="btn-payment">طرق الدفع</a>
-                </article>
-
-                <article class="product-card">
-                    <img src="images/placeholder_abaya.jpg" alt="عباية فاخرة مطرزة">
-                    <h3>منتج قادم قريباً (8)</h3>
-                    <p class="product-info">عباية بتصميم عصري وخياطة يدوية دقيقة ومواد فاخرة.</p>
-                    <button class="btn-primary btn-details" data-product-id="product-8">تفاصيل وسعر المنتج</button>
-                    <a href="#payment" class="btn-payment">طرق الدفع</a>
-                </article>
-
-                <article class="product-card">
-                    <img src="images/placeholder_spring.jpg" alt="فستان مجموعة الربيع">
-                    <h3>منتج قادم قريباً (9)</h3>
-                    <p class="product-info">تصميم خفيف ومناسب للمناسبات النهارية بألوان مشرقة.</p>
-                    <button class="btn-primary btn-details" data-product-id="product-9">تفاصيل وسعر المنتج</button>
-                    <a href="#payment" class="btn-payment">طرق الدفع</a>
-                </article>
-                
-                <article class="product-card">
-                    <img src="images/placeholder_coat.jpg" alt="معطف شتوي أنيق">
-                    <h3>منتج قادم قريباً (10)</h3>
-                    <p class="product-info">معطف من الصوف بتصميم كلاسيكي، متوفر بمقاسات مختلفة.</p>
-                    <button class="btn-primary btn-details" data-product-id="product-10">تفاصيل وسعر المنتج</button>
-                    <a href="#payment" class="btn-payment">طرق الدفع</a>
-                </article>
-
-                <article class="product-card">
-                    <img src="images/placeholder_skirt.jpg" alt="تنورة وبلوزة رسمية">
-                    <h3>منتج قادم قريباً (11)</h3>
-                    <p class="product-info">طقم رسمي مثالي للعمل، خياطة متقنة ومواد عالية الجودة.</p>
-                    <button class="btn-primary btn-details" data-product-id="product-11">تفاصيل وسعر المنتج</button>
-                    <a href="#payment" class="btn-payment">طرق الدفع</a>
-                </article>
-
-                <article class="product-card">
-                    <img src="images/placeholder_silk.jpg" alt="طقم بيجامة حرير">
-                    <h3>منتج قادم قريباً (12)</h3>
-                    <p class="product-info">طقم مريح وفاخر من الحرير الطبيعي بتطريز ناعم.</p>
-                    <button class="btn-primary btn-details" data-product-id="product-12">تفاصيل وسعر المنتج</button>
-                    <a href="#payment" class="btn-payment">طرق الدفع</a>
-                </article>
-
-                <article class="product-card">
-                    <img src="images/placeholder_veil.jpg" alt="طرحة زفاف وتفاصيل">
-                    <h3>منتج قادم قريباً (13)</h3>
-                    <p class="product-info">تفصيل طرحات وإكسسوارات زفاف حسب تصميم العروس.</p>
-                    <button class="btn-primary btn-details" data-product-id="product-13">تفاصيل وسعر المنتج</button>
-                    <a href="#payment" class="btn-payment">طرق الدفع</a>
-                </article>
-
-            </div>
-        </section>
-
-        <section id="payment" class="alt-bg">
-            <h2>طرق الدفع المتاحة</h2>
-            <p class="section-subtitle">نوفر عدة خيارات دفع لتسهيل عملية الشراء عليك:</p>
-            <div class="payment-grid container">
-                <div class="payment-card">
-                    <i class="fas fa-hand-holding-usd"></i>
-                    <h3>الدفع نقداً</h3>
-                    <p>الدفع عند الاستلام داخل السماوة والمناطق المحيطة.</p>
-                    <a href="#contact" class="btn-payment-small">تواصل معنا</a>
+        <h2>🛍️ منتجاتنا الجديدة</h2>
+        
+        <section class="product-card">
+            <h3 class="product-title">1. جاكيت فرو - اللون البرغندي</h3>
+            <div class="image-gallery" id="fur-jacket-gallery">
+                <img src="1000305430.jpg" alt="جاكيت فرو برغندي" class="active-img">
+                <img src="1000305429.jpg" alt="تفاصيل فرو برغندي" class="hidden-img">
+                <img src="1000305431.jpg" alt="تفاصيل الحزام" class="hidden-img">
+                <div class="nav-buttons">
+                    <button onclick="changeImage('fur-jacket-gallery', -1)">السابق</button>
+                    <button onclick="changeImage('fur-jacket-gallery', 1)">التالي</button>
                 </div>
-                <div class="payment-card">
-                    <i class="fas fa-credit-card"></i>
-                    <h3>الكي كارد (Ki Card)</h3>
-                    <p>يمكنك الدفع عبر تحويل المبلغ إلى رقم الكي كارد الخاص بنا.</p>
-                    <p class="contact-detail">سيتم تزويدك بالرقم عند الطلب.</p>
-                </div>
-                <div class="payment-card">
-                    <i class="fas fa-wallet"></i>
-                    <h3>زين كاش (Zain Cash)</h3>
-                    <p>الدفع عبر المحفظة الإلكترونية، وهي طريقة سريعة وآمنة.</p>
-                    <p class="contact-detail">سيتم تزويدك بالرقم عند الطلب.</p>
+            </div>
+            <div class="product-details">
+                <h4>وصف المنتج:</h4>
+                <ul>
+                    <li><strong>مُبطن بالكامل</strong></li>
+                    <li><strong>الطول:</strong> 65 سم</li>
+                    <li><strong>الألوان المتوفرة:</strong> البرغندي فقط</li>
+                    <li><strong>القياس:</strong> فري سايز</li>
+                </ul>
+                <p><strong>مشاهدة الريلز:</strong> <a href="https://www.instagram.com/reel/DRfBh-GjWqh/?igsh=eGttYThxdW5oaXpy" target="_blank">شاهد الفيديو على إنستغرام</a></p>
+                
+                <div class="order-info">
+                    <h4>طرق الطلب والشراء:</h4>
+                    <ul>
+                        <li><strong>الطلب عبر إنستغرام:</strong> يرجى إرسال رسالة مباشرة (DM).</li>
+                        <li><strong>الطلب عبر واتساب:</strong> <a href="https://wa.me/9647756000447" target="_blank">+964 775 600 0447</a></li>
+                        <li><strong>الطلب عبر رقم الكي كارد (برنامج Super Qi):</strong> 7147028117</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <section id="contact">
-            <h2>تواصل معنا</h2>
-            <p>نرحب بطلبات التفصيل الخاصة والتعاونات الجديدة. جاهزون للرد على استفساراتكم!</p>
-            <div class="contact-info">
-                <p><i class="fas fa-envelope"></i> <strong>البريد الإلكتروني:</strong> <a href="mailto:deemahussein18@gmail.com">deemahussein18@gmail.com</a></p>
-                <p><i class="fas fa-map-marker-alt"></i> <strong>الموقع:</strong> السماوة، المثنى، العراق</p>
-                <p class="instagram-link"><i class="fab fa-instagram"></i> <strong>انستغرام:</strong> <a href="https://www.instagram.com/deemaboutiquee?igsh=cmNxcTMzY3JldG96&utm_source=qr" target="_blank">@deemaboutiquee</a></p>
-                <p class="tiktok-link"><i class="fab fa-tiktok"></i> <strong>تيك توك:</strong> <a href="https://www.tiktok.com/@deemaaboutiquee?_t=ZS-90cTEfpuSor&_r=1" target="_blank">@deemaaboutiquee</a></p>
-            </div>
-            
-            <div class="qr-code-box">
-                <h3>امسح الكود لزيارة المتجر مباشرةً</h3>
-                <img src="images/qr_code_placeholder.png" alt="QR Code Link to Deema Boutique Website" class="qr-image">
-            </div>
+        <hr>
 
+        <section class="product-card">
+            <h3 class="product-title">2. سوت تنورة كاجوال</h3>
+            <div class="image-gallery" id="skirt-suit-gallery">
+                <img src="1000305433.jpg" alt="سوت تنورة كاجوال - ماروني" class="active-img">
+                <img src="1000305432.jpg" alt="سوت تنورة كاجوال - نيلي" class="hidden-img">
+                <img src="1000305435.jpg" alt="تفاصيل السويتر الماروني" class="hidden-img">
+                <img src="1000305434.jpg" alt="تفاصيل السويتر النيلي" class="hidden-img">
+                <div class="nav-buttons">
+                    <button onclick="changeImage('skirt-suit-gallery', -1)">السابق</button>
+                    <button onclick="changeImage('skirt-suit-gallery', 1)">التالي</button>
+                </div>
+            </div>
+            <div class="product-details">
+                <h4>وصف المنتج:</h4>
+                <ul>
+                    <li><strong>الألوان المتوفرة:</strong> الماروني والنيلي</li>
+                    <li><strong>طول التنورة:</strong> 100 سم</li>
+                    <li><strong>طول السويتر:</strong> 65 سم</li>
+                    <li><strong>نوع الخامة (المتيريال):</strong> Soft Suede⁩</li>
+                    <li><strong>القياسات المتوفرة:</strong> S، M، L⁩</li>
+                </ul>
+                <p><strong>مشاهدة الريلز:</strong> <a href="https://www.instagram.com/reel/DQuRQQCDX-Q/?igsh=MXA4MjJqODJyYWpmdA==" target="_blank">شاهد الفيديو على إنستغرام</a></p>
+                
+                <div class="order-info">
+                    <h4>طرق الطلب والشراء:</h4>
+                    <ul>
+                        <li><strong>الطلب عبر إنستغرام:</strong> يرجى إرسال رسالة مباشرة (DM).</li>
+                        <li><strong>الطلب عبر واتساب:</strong> <a href="https://wa.me/9647756000447" target="_blank">+964 775 600 0447</a></li>
+                        <li><strong>الطلب عبر رقم الكي كارد (برنامج Super Qi):</strong> 7147028117</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="product-card">
+            <h3 class="product-title">3. سوت أسود رسمي</h3>
+            <div class="image-gallery" id="black-suit-gallery">
+                <img src="1000305436.jpg" alt="سوت أسود رسمي" class="active-img">
+                <img src="1000305437.jpg" alt="تفاصيل حزام البنطلون" class="hidden-img">
+                <img src="1000305438.jpg" alt="نظرة عامة على السوت" class="hidden-img">
+                <div class="nav-buttons">
+                    <button onclick="changeImage('black-suit-gallery', -1)">السابق</button>
+                    <button onclick="changeImage('black-suit-gallery', 1)">التالي</button>
+                </div>
+            </div>
+            <div class="product-details">
+                <h4>وصف المنتج:</h4>
+                <ul>
+                    <li><strong>البليزر طولها:</strong> 75 سم</li>
+                    <li><strong>البليزر:</strong> مُبطنة من الأمام فقط</li>
+                    <li><strong>البنطلون طوله:</strong> 110 سم</li>
+                    <li><strong>البنطلون:</strong> مع چاكة جانبية (جيب) يمكن غلقها</li>
+                    <li><strong>القياسات المتوفرة:</strong> 38، 40، 42، 44</li>
+                </ul>
+                <p><strong>مشاهدة الريلز:</strong> <a href="https://www.instagram.com/reel/DQZpyuRDf8u/?igsh=MXhlMnF6aWlzZHVuZQ==" target="_blank">شاهد الفيديو على إنستغرام</a></p>
+                
+                <div class="order-info">
+                    <h4>طرق الطلب والشراء:</h4>
+                    <ul>
+                        <li><strong>الطلب عبر إنستغرام:</strong> يرجى إرسال رسالة مباشرة (DM).</li>
+                        <li><strong>الطلب عبر واتساب:</strong> <a href="https://wa.me/9647756000447" target="_blank">+964 775 600 0447</a></li>
+                        <li><strong>الطلب عبر رقم الكي كارد (برنامج Super Qi):</strong> 7147028117</li>
+                    </ul>
+                </div>
+            </div>
         </section>
     </main>
-
-    <div id="gray-suit-modal" class="modal product-details-modal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <div class="details-layout">
-                <div class="image-gallery">
-                    <img src="images/image_gray_1.jpg" class="gallery-image active" data-index="0" alt="صورة 1 - الطقم الرمادي">
-                    <img src="images/image_gray_2.jpg" class="gallery-image" data-index="1" alt="صورة 2 - الطقم الرمادي">
-                    <img src="images/image_gray_3.jpg" class="gallery-image" data-index="2" alt="صورة 3 - الطقم الرمادي">
-                    <div class="gallery-nav">
-                        <span class="dot active" data-index="0"></span>
-                        <span class="dot" data-index="1"></span>
-                        <span class="dot" data-index="2"></span>
-                    </div>
-                </div>
-                <div class="product-specs">
-                    <h2>الطقم الرسمي الرمادي</h2>
-                    <p class="product-material">قياسات خاصة، تفصيل يدوي فاخر</p>
-                    <p class="product-description">طقم رسمي نسائي باللون الرمادي الفاتح، خياطة احترافية وتفاصيل دقيقة، مثالي للمناسبات الرسمية والاجتماعات.</p>
-
-                    <div class="price-box">
-                        <span class="price-label">السعر:</span>
-                        <span class="product-price">يرجى التواصل</span>
-                    </div>
-
-                    <div class="specs-list">
-                        <h3>المواصفات الرئيسية:</h3>
-                        <ul>
-                            <li>التفاصيل: تصميم بليزر و بنطلون بأرجل واسعة.</li>
-                            <li>المقاسات: تفصيل حسب الطلب (لجميع المقاسات).</li>
-                            <li>الألوان: الرمادي الفاتح، والوان أخرى حسب الطلب.</li>
-                        </ul>
-                    </div>
-
-                    <a href="https://www.instagram.com/p/PLACEHOLDER/?utm_source=qr" target="_blank" class="btn-primary btn-large btn-reel">شاهد الفيديو التعريفي (Reel)</a>
-                    <a href="https://www.instagram.com/deemaboutiquee" target="_blank" class="btn-primary btn-large btn-order btn-instagram">اطلب عبر انستغرام</a>
-                    <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank" class="btn-primary btn-large btn-order btn-whatsapp">اطلب عبر الواتساب</a>
-                    <a href="#" class="btn-primary btn-large btn-order btn-ki-card">الطلب عبر الكي كارد</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div id="fur-jacket-modal" class="modal product-details-modal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <div class="details-layout">
-                <div class="image-gallery">
-                    <img src="images/image_fur_1.jpg" class="gallery-image active" data-index="0" alt="صورة 1 - جاكيت فرو">
-                    <img src="images/image_fur_2.jpg" class="gallery-image" data-index="1" alt="صورة 2 - جاكيت فرو">
-                    <img src="images/image_fur_3.jpg" class="gallery-image" data-index="2" alt="صورة 3 - جاكيت فرو">
-                    <div class="gallery-nav">
-                        <span class="dot active" data-index="0"></span>
-                        <span class="dot" data-index="1"></span>
-                        <span class="dot" data-index="2"></span>
-                    </div>
-                </div>
-                <div class="product-specs">
-                    <h2>جاكيت فرو مُبطن</h2>
-                    <p class="product-material">فرو مبطن فاخر</p>
-                    <p class="product-description">جاكيت فرو أنيق ومُبطن بالكامل يمنحك الدفء والمظهر الفاخر. تصميم بقصة مميزة وحزام رفيع.</p>
-
-                    <div class="price-box">
-                        <span class="price-label">السعر:</span>
-                        <span class="product-price">يرجى التواصل</span>
-                    </div>
-
-                    <div class="specs-list">
-                        <h3>المواصفات الرئيسية:</h3>
-                        <ul>
-                            <li>**التفاصيل:** جاكيت فرو مُبطن بالكامل.</li>
-                            <li>**الطول:** 65cm.</li>
-                            <li>**الألوان:** متوفر باللون البرغندي فقط.</li>
-                            <li>**القياسات:** فري سايز (Free Size).</li>
-                        </ul>
-                    </div>
-
-                    <a href="https://www.instagram.com/reel/DRfBh-GjWqh/?igsh=eGttYThxdW5oaXpy" target="_blank" class="btn-primary btn-large btn-reel">شاهد الفيديو التعريفي (Reel)</a>
-                    <a href="https://www.instagram.com/deemaboutiquee" target="_blank" class="btn-primary btn-large btn-order btn-instagram">اطلب عبر انستغرام</a>
-                    <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank" class="btn-primary btn-large btn-order btn-whatsapp">اطلب عبر الواتساب</a>
-                    <a href="#" class="btn-primary btn-large btn-order btn-ki-card">الطلب عبر الكي كارد</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="skirt-suit-modal" class="modal product-details-modal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <div class="details-layout">
-                <div class="image-gallery">
-                    <img src="images/image_suit_skirt_1.jpg" class="gallery-image active" data-index="0" alt="صورة 1 - طقم تنورة ماروني">
-                    <img src="images/image_suit_skirt_2.jpg" class="gallery-image" data-index="1" alt="صورة 2 - طقم تنورة ماروني (مقربة)">
-                    <img src="images/image_suit_skirt_3.jpg" class="gallery-image" data-index="2" alt="صورة 3 - طقم تنورة نيلي">
-                    <img src="images/image_suit_skirt_4.jpg" class="gallery-image" data-index="3" alt="صورة 4 - طقم تنورة نيلي (مقربة)">
-                    <div class="gallery-nav">
-                        <span class="dot active" data-index="0"></span>
-                        <span class="dot" data-index="1"></span>
-                        <span class="dot" data-index="2"></span>
-                        <span class="dot" data-index="3"></span>
-                    </div>
-                </div>
-                <div class="product-specs">
-                    <h2>طقم تنورة كاجول</h2>
-                    <p class="product-material">خامة Soft Suede عالية الجودة</p>
-                    <p class="product-description">طقم مريح وأنيق بتنورة طويلة وسويتر مزود بقبعة. مثالي للخروج اليومي بإطلالة عصرية محتشمة.</p>
-
-                    <div class="price-box">
-                        <span class="price-label">السعر:</span>
-                        <span class="product-price">يرجى التواصل</span>
-                    </div>
-
-                    <div class="specs-list">
-                        <h3>المواصفات الرئيسية:</h3>
-                        <ul>
-                            <li>**التفاصيل:** سوت تنورة كاجول بقطع منفصلة.</li>
-                            <li>**الألوان:** متوفر باللون الماروني واللون النيلي.</li>
-                            <li>**المتيريال:** Soft Suede⁩.</li>
-                            <li>**الطول:** طول التنورة 100cm، طول السويتر 65cm.</li>
-                            <li>**القياسات:** متوفرة: S, M, L⁩.</li>
-                        </ul>
-                    </div>
-
-                    <a href="https://www.instagram.com/reel/DQuRQQCDX-Q/?igsh=MXA4MjJqODJyYWpmdA==" target="_blank" class="btn-primary btn-large btn-reel">شاهد الفيديو التعريفي (Reel)</a>
-                    <a href="https://www.instagram.com/deemaboutiquee" target="_blank" class="btn-primary btn-large btn-order btn-instagram">اطلب عبر انستغرام</a>
-                    <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank" class="btn-primary btn-large btn-order btn-whatsapp">اطلب عبر الواتساب</a>
-                    <a href="#" class="btn-primary btn-large btn-order btn-ki-card">الطلب عبر الكي كارد</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div id="black-suit-modal" class="modal product-details-modal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <div class="details-layout">
-                <div class="image-gallery">
-                    <img src="images/image_black_suit_1.jpg" class="gallery-image active" data-index="0" alt="صورة 1 - سوت رسمي أسود">
-                    <img src="images/image_black_suit_2.jpg" class="gallery-image" data-index="1" alt="صورة 2 - سوت رسمي أسود">
-                    <img src="images/image_black_suit_3.jpg" class="gallery-image" data-index="2" alt="صورة 3 - تفاصيل البنطلون">
-                    <div class="gallery-nav">
-                        <span class="dot active" data-index="0"></span>
-                        <span class="dot" data-index="1"></span>
-                        <span class="dot" data-index="2"></span>
-                    </div>
-                </div>
-                <div class="product-specs">
-                    <h2>سوت رسمي أسود</h2>
-                    <p class="product-material">خياطة رسمية احترافية</p>
-                    <p class="product-description">سوت أسود أنيق بليزر طويلة وبنطلون بأرجل واسعة، مبطن من الأمام لتوفير مظهر مرتب ومريح.</p>
-
-                    <div class="price-box">
-                        <span class="price-label">السعر:</span>
-                        <span class="product-price">يرجى التواصل</span>
-                    </div>
-
-                    <div class="specs-list">
-                        <h3>المواصفات الرئيسية:</h3>
-                        <ul>
-                            <li>**التفاصيل:** بليزر بياقة عريضة وبنطلون بخصر أنيق.</li>
-                            <li>**البليزر:** طولها 75cm، مُبطنة من الأمام فقط.</li>
-                            <li>**البنطلون:** طوله 110cm، مع چاكة جانبية يمكن غلقها.</li>
-                            <li>**القياسات:** متوفرة: 38, 40, 42, 44.</li>
-                        </ul>
-                    </div>
-
-                    <a href="https://www.instagram.com/reel/DQZpyuRDf8u/?igsh=MXhlMnF6aWlzZHVuZQ==" target="_blank" class="btn-primary btn-large btn-reel">شاهد الفيديو التعريفي (Reel)</a>
-                    <a href="https://www.instagram.com/deemaboutiquee" target="_blank" class="btn-primary btn-large btn-order btn-instagram">اطلب عبر انستغرام</a>
-                    <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank" class="btn-primary btn-large btn-order btn-whatsapp">اطلب عبر الواتساب</a>
-                    <a href="#" class="btn-primary btn-large btn-order btn-ki-card">الطلب عبر الكي كارد</a>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <script src="script.js"></script>
 </body>
