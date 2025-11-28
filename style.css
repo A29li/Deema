@@ -144,22 +144,20 @@ nav {
     background-color: #C0A88F;
 }
 
-/* Products Grid (القسم الذي تم تعديله لضمان التنسيق) */
+/* Products Grid (القسم الذي تم تعديله لضمان التنسيق الجيد) */
 #products {
     background-color: #1e1e1e;
 }
 .products-grid {
-    /* التعديل هنا: ضمان شبكة مرنة ولكن منظمة */
+    /* التعديل الجذري: نستخدم grid-template-columns لفرض 3 أعمدة متساوية على الشاشات الكبيرة */
     display: grid;
-    /* تحديد الأعمدة: 3 أعمدة في الأجهزة الكبيرة، وتنخفض حسب حجم الشاشة */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-    gap: 30px; /* تباعد كافي بين البطاقات */
+    grid-template-columns: repeat(3, 1fr); /* FORCES 3 equal columns */
+    gap: 30px; 
 }
 .product-card {
-    /* تمكين Flexbox لضمان أن جميع بطاقات المنتجات متساوية في الارتفاع */
     display: flex; 
     flex-direction: column;
-    justify-content: space-between; /* دفع الأزرار إلى الأسفل */
+    justify-content: space-between; 
     
     background: #252525;
     border-radius: 8px;
@@ -173,10 +171,10 @@ nav {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
 }
 .product-card img {
-    /* التعديل هنا: تحديد ارتفاع ثابت وضمان عدم تشوه الصورة */
+    /* الأهم: ضمان عدم تشوه الصورة بفرض ارتفاع ثابت وملاءمة */
     width: 100%;
-    height: 350px; /* زيادة ارتفاع الصورة لجعلها أكثر وضوحاً في متجر أزياء */
-    object-fit: cover; /* الأهم: يضمن أن الصورة تغطي المساحة دون تشوه */
+    height: 350px; 
+    object-fit: cover; 
     display: block;
 }
 .product-card h3 {
@@ -188,7 +186,7 @@ nav {
     padding: 0 15px 10px 15px;
     color: #d0d0d0;
     font-size: 1.1em;
-    flex-grow: 1; /* للسماح لوصف المنتج بأخذ المساحة اللازمة */
+    flex-grow: 1; 
 }
 /* Style for Order and Payment Buttons under Products */
 .btn-details, .btn-order, .btn-payment, .view-link {
@@ -206,14 +204,14 @@ nav {
     background-color: #A08A6F;
     color: #151515;
     font-size: 1.2em;
-    margin: 10px 15px 5px 15px !important; /* تفاصيل المنتج أولاً */
+    margin: 10px 15px 5px 15px !important; 
     padding: 15px 40px;
 }
 .btn-details:hover {
     background-color: #C0A88F;
 }
 .btn-order {
-    background-color: #E1306C; /* Instagram Color - لم يتغير */
+    background-color: #E1306C; 
     color: #fff;
     font-size: 1.2em;
 }
@@ -257,7 +255,7 @@ nav {
 }
 .payment-card i {
     font-size: 3em;
-    color: #A08A6F; /* أيقونات الدفع باللون الذهبي */
+    color: #A08A6F; 
     margin-bottom: 15px;
 }
 .payment-card h3 {
@@ -294,7 +292,7 @@ nav {
     padding-top: 20px;
 }
 .contact-info p {
-    text-align: center; /* إعادة المحاذاة للوسط للتواصل */
+    text-align: center; 
     font-size: 1.25em;
     margin: 15px 0;
 }
@@ -304,7 +302,7 @@ nav {
 }
 /* تنسيق أيقونة ورابط تيك توك */
 .tiktok-link i {
-    color: #69C9D0; /* لون تيك توك الأصلي */
+    color: #69C9D0; 
     background: #000;
     border-radius: 50%;
     padding: 2px;
@@ -319,7 +317,7 @@ nav {
 
 /* --- Modal (General Styling) --- */
 .modal {
-    display: none; /* Hidden by default */
+    display: none; 
     position: fixed; 
     z-index: 200; 
     left: 0;
@@ -379,7 +377,7 @@ nav {
 /* --- Product Details Modal Styling --- */
 .product-details-modal .modal-content {
     background-color: #1e1e1e;
-    max-width: 900px; /* Bigger modal for product details */
+    max-width: 900px; 
     margin: 5% auto;
     padding: 20px;
 }
@@ -388,7 +386,7 @@ nav {
     display: flex;
     gap: 30px;
     text-align: right;
-    direction: rtl; /* Force right-to-left for layout */
+    direction: rtl; 
 }
 
 .image-gallery {
@@ -433,7 +431,7 @@ nav {
 .product-specs h2 {
     color: #fff;
     font-size: 2em;
-    border-bottom: 2px solid #A08A6F; /* فصل ذهبي أنيق */
+    border-bottom: 2px solid #A08A6F; 
     padding-bottom: 10px;
     text-align: right;
 }
@@ -444,8 +442,8 @@ nav {
     font-weight: 700;
 }
 .price-box {
-    background-color: #A08A6F; /* صندوق السعر الذهبي */
-    color: #151515; /* نص داكن */
+    background-color: #A08A6F; 
+    color: #151515; 
     padding: 15px;
     border-radius: 6px;
     margin: 20px 0;
@@ -478,7 +476,7 @@ nav {
     padding: 0;
 }
 .specs-list li {
-    background: #333333; /* لون خلفية القائمة داكن */
+    background: #333333; 
     padding: 10px;
     margin-bottom: 8px;
     border-radius: 4px;
@@ -502,16 +500,16 @@ nav {
     color: #A08A6F;
 }
 .btn-order {
-    background-color: #E1306C; /* Instagram Color */
+    background-color: #E1306C; 
     color: #fff;
 }
 
 
 /* Media Queries for Responsiveness */
-@media (min-width: 1024px) {
+@media (max-width: 1024px) {
     .products-grid {
-        /* في الشاشات الكبيرة، عرض 3 منتجات في الصف للحصول على مظهر متجر كلاسيكي */
-        grid-template-columns: repeat(3, 1fr); 
+        /* عند الشاشات المتوسطة، نتحول لعمودين */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 @media (max-width: 768px) {
@@ -543,7 +541,7 @@ nav {
         gap: 20px;
     }
     .product-card img {
-        height: 300px; /* تقليل الارتفاع قليلاً للموبايل */
+        height: 300px; 
     }
 
     /* Product Details Modal adjustments */
