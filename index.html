@@ -90,8 +90,17 @@
                     <button class="btn-primary btn-details" data-product-id="black-suit">تفاصيل وسعر المنتج</button>
                     <a href="#payment" class="btn-payment">طرق الدفع</a>
                 </article>
-
-            </div>
+                
+                <article class="product-card">
+                    <img src="images/zara_suit_1.jpg" alt="Zara Suit">
+                    <h3>سوت زارا</h3>
+                    <p class="product-info">طقم سويتر وبنطلون بستايل "زارا". تفصيل مميز وتطريز على الأكمام. متوفر بهذا اللون فقط.</p>
+                    
+                    <button class="btn-primary btn-details" data-product-id="zara-suit">تفاصيل وسعر المنتج</button>
+                    <a href="#payment" class="btn-payment">طرق الدفع</a>
+                </article>
+                
+                </div>
         </section>
 
         <section id="payment" class="alt-bg">
@@ -318,6 +327,52 @@
             </div>
         </div>
     </div>
+    
+    <div id="zara-suit-modal" class="product-details-modal modal" data-product-id="zara-suit">
+        <div class="modal-content">
+            <span class="close-btn details-close-btn">&times;</span>
+            <div class="details-layout">
+                <div class="image-gallery">
+                    <img src="images/zara_suit_1.jpg" alt="Zara Suit Image 1" class="gallery-image active">
+                    <img src="images/zara_suit_2.jpg" alt="Zara Suit Image 2" class="gallery-image">
+                    <img src="images/zara_suit_3.jpg" alt="Zara Suit Image 3" class="gallery-image">
+                    
+                    <div class="gallery-nav">
+                        <span class="dot active" data-image-index="0"></span>
+                        <span class="dot" data-image-index="1"></span>
+                        <span class="dot" data-image-index="2"></span>
+                    </div>
+                </div>
+
+                <div class="product-specs">
+                    <h2>سوت زارا</h2>
+                    <p class="product-material">المتيريال: **غير محدد (تم استخدام اسم المنتج)**</p>
+
+                    <div class="price-box">
+                        <span class="price-label">السعر:</span>
+                        <span class="product-price">115,000 د.ع.</span> </div>
+
+                    <div class="specs-list">
+                        <h3>تفاصيل المنتج:</h3>
+                        <ul>
+                            <li>اللون المتوفر: هذا اللون فقط (بيج/أوف وايت)</li>
+                            <li>القصة: السويتر قصير من الأمام ويغطي الورك من الخلف</li>
+                            <li>البنطرون: وايد ليگ (Wide Leg)</li>
+                            <li>طول البنطرون: 105cm</li>
+                            <li>القياسات المتوفرة: S, M, L</li>
+                        </ul>
+                    </div>
+                    
+                    <a href="https://www.instagram.com/reel/DQCeZhuDM-8/?igsh=MW90enduMG5yajhqaw==" target="_blank" class="btn-reel btn-large"><i class="fab fa-instagram"></i> شاهد الريلز والقياسات على انستغرام</a>
+                    
+                    <a href="https://wa.me/9647756000447" target="_blank" class="btn-whatsapp btn-large">اطلب الآن عبر الواتساب <i class="fab fa-whatsapp"></i></a>
+                    <button class="btn-kicard btn-large" onclick="alert('للدفع عبر كي كارد (برنامج Super Qi)، يرجى استخدام الرقم 7147028117 بعد التواصل معنا لتأكيد الطلب.')">الدفع عبر كي كارد (Super Qi) <i class="fas fa-credit-card"></i></button>
+                    <a href="https://www.instagram.com/deemaboutiquee" target="_blank" class="btn-order btn-large">اطلب الآن عبر انستغرام <i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <script src="script.js"></script>
 </body>
