@@ -1,47 +1,401 @@
-function changeImage(galleryId, step) {
-    const gallery = document.getElementById(galleryId);
-    // جلب جميع الصور داخل المعرض المحدد
-    const images = gallery.querySelectorAll('img');
-    let currentIndex = -1;
+/*
+    ========================================
+    Deema Boutique - Revised Styles (Arabic RTL)
+    ========================================
+*/
 
-    // 1. تحديد وحذف الصورة النشطة الحالية
-    images.forEach((img, index) => {
-        if (img.classList.contains('active-img')) {
-            currentIndex = index;
-            img.classList.remove('active-img');
-            img.classList.add('hidden-img'); // إخفاء الصورة القديمة
-        }
-    });
-
-    let newIndex = currentIndex + step;
-
-    // 2. ضمان أن الفهرس يبقى ضمن حدود عدد الصور
-    if (newIndex >= images.length) {
-        newIndex = 0; // العودة إلى الصورة الأولى
-    } else if (newIndex < 0) {
-        newIndex = images.length - 1; // الذهاب إلى الصورة الأخيرة
-    }
-
-    // 3. تعيين الصورة الجديدة كصورة نشطة
-    if (images[newIndex]) {
-        images[newIndex].classList.remove('hidden-img');
-        images[newIndex].classList.add('active-img');
-    }
+/* 1. Base Styles & Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* تعيين الخطوط المفضلة للموقع بالكامل */
+    font-family: 'Cairo', 'Poppins', sans-serif;
 }
 
-// عند تحميل الصفحة، تأكد من إخفاء جميع الصور ما عدا الأولى في كل معرض
-document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.image-gallery').forEach(gallery => {
-        const images = gallery.querySelectorAll('img');
-        images.forEach((img, index) => {
-            if (index === 0) {
-                img.classList.add('active-img');
-            } else {
-                img.classList.add('hidden-img');
-            }
-        });
-    });
-});
+body {
+    /* تغيير الاتجاه إلى اليمين ليتناسب مع اللغة العربية */
+    direction: rtl;
+    background-color: #151515; /* خلفية داكنة جداً */
+    color: #f0f0f0; /* لون النص العام (أبيض فاتح) */
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    padding-bottom: 50px; /* لتوفير مساحة أسفل الموقع */
+}
+
+a {
+    color: #A08A6F; /* لون ذهبي/عاجي للروابط */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #fff;
+}
+
+h1, h2, h3 {
+    color: #fff; /* العناوين بيضاء */
+    margin-bottom: 0.5em;
+    font-weight: 700;
+}
+
+/* 2. Header & Navigation */
+header {
+    background-color: #151515;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 25px;
+}
+
+nav ul li a {
+    color: #A08A6F;
+    font-weight: 600;
+    padding: 5px 0;
+    border-bottom: 2px solid transparent;
+}
+
+nav ul li a:hover {
+    color: #fff;
+    border-bottom: 2px solid #A08A6F;
+}
+
+/* 3. Hero Section (Welcome) */
+#hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 80px 5%;
+    min-height: 80vh;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #A08A6F;
+    margin-bottom: 20px;
+    object-fit: cover;
+    background-color: #333;
+}
+
+.welcome-text {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin-bottom: 20px;
+    color: #ccc; /* لون فاتح قليلاً */
+}
+
+.highlight {
+    color: #A08A6F;
+    font-weight: bold;
+}
+
+.typewriter-text {
+    font-size: 2em;
+    font-weight: 300;
+    min-height: 1.5em;
+    color: #fff;
+}
+
+.btn-primary {
+    background-color: #A08A6F;
+    color: #151515;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 20px;
+    font-size: 1.1em;
+}
+
+.btn-primary:hover {
+    background-color: #fff;
+}
+
+/* 4. Products Section */
+#products {
+    padding: 50px 5%;
+    text-align: center;
+}
+
+#products h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    font-size: 1.1em;
+    margin-bottom: 40px;
+    color: #ccc;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background-color: #222; /* خلفية بطاقة المنتج */
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: right;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+}
+
+.product-card img {
+    width: 100%;
+    height: 350px; /* ارتفاع ثابت للصور */
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 1.4em;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.product-card .product-info {
+    color: #ccc;
+    font-size: 0.95em;
+    margin-bottom: 15px;
+    min-height: 40px;
+}
+
+.btn-details {
+    background-color: #A08A6F;
+    color: #151515;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+.btn-details:hover {
+    background-color: #fff;
+}
+
+.btn-payment {
+    background-color: #333;
+    color: #A08A6F;
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+    display: block;
+    font-size: 1em;
+}
+
+.btn-payment:hover {
+    background-color: #444;
+    color: #fff;
+}
+
+
+/* 5. Product Details Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 200;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-top: 50px;
+}
+
+.modal-content {
+    background-color: #151515;
+    margin: 5% auto;
+    padding: 30px;
+    border: 1px solid #333;
+    width: 90%;
+    max-width: 1100px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.close-btn {
+    color: #fff;
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #A08A6F;
+}
+
+.details-layout {
+    display: flex;
+    gap: 30px;
+    text-align: right;
+}
+
+.image-gallery {
+    flex: 2;
+    position: relative;
+    max-width: 500px;
+}
+
+.gallery-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: none;
+}
+
+.gallery-image.active {
+    display: block;
+}
+
+.gallery-nav {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 4px;
+    background-color: #555;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: #A08A6F;
+}
+
+.product-specs {
+    flex: 3;
+}
+
+.product-specs h2 {
+    font-size: 2em;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.product-specs p {
+    margin-bottom: 10px;
+    color: #ccc;
+}
+
+.product-material {
+    color: #A08A6F;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.price-box {
+    background-color: #222;
+    padding: 15px;
+    border-radius: 6px;
+    margin: 20px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.price-label {
+    font-weight: bold;
+    font-size: 1.3em;
+    color: #fff;
+    margin-left: 10px;
+}
+
+.product-price {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #A08A6F;
+}
+
+.specs-list h3 {
+    font-size: 1.2em;
+    color: #fff;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.specs-list ul {
+    list-style-type: none;
+    padding-right: 0;
+}
+
+.specs-list li {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24"><path fill="%23A08A6F" d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>') no-repeat right center;
+    background-size: 16px;
+    padding-right: 25px;
+    margin-bottom: 8px;
+    color: #ccc;
+    font-size: 1.05em;
+}
+
+.btn-large {
+    width: 100%;
+    padding: 15px 25px;
+    font-size: 1.2em;
+    margin-top: 15px;
+}
+
+.btn-reel {
+    background-color: #333;
+    color: #A08A6F;
+    border: 1px solid #A08A6F;
+}
+
+.btn-reel:hover {
+    background-color: #444;
+    color: #fff;
+}
+
+
 /* --- New Order Buttons Styling (Added for WhatsApp and Ki Card) --- */
 .btn-order {
     /* تنسيق عام لأزرار الطلب في المودال */
@@ -83,4 +437,90 @@ document.addEventListener('DOMContentLoaded', () => {
 .btn-order.btn-ki-card:hover {
     background-color: #555555;
     color: #fff;
+}
+
+
+/* 6. Contact & Payment Section (Unified) */
+#payment {
+    padding: 50px 5%;
+    text-align: center;
+    border-top: 1px solid #333;
+    margin-top: 50px;
+}
+
+#payment h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.payment-options {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.option-card {
+    background-color: #222;
+    padding: 25px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: right;
+}
+
+.option-card h3 {
+    color: #A08A6F;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.contact-info {
+    text-align: center;
+}
+
+.contact-info p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+/* 7. Footer */
+footer {
+    text-align: center;
+    padding: 20px 5%;
+    background-color: #151515;
+    color: #555;
+    font-size: 0.9em;
+}
+
+/* 8. Media Queries for Responsiveness */
+@media (max-width: 900px) {
+    .details-layout {
+        flex-direction: column;
+    }
+
+    .image-gallery {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav ul {
+        margin-top: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 5px 10px;
+    }
+    
+    .typewriter-text {
+        font-size: 1.5em;
+    }
 }
